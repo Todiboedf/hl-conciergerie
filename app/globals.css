@@ -56,10 +56,14 @@
   --sidebar-accent-foreground: var(--bone);
   --sidebar-border: rgba(212, 200, 154, 0.18);
   --sidebar-ring: var(--gold);
+
+  /* Layout */
+  --header-height: 5.5rem; /* 88px : accommodates ~83px lg header + buffer */
+  --section-padding-y: 8rem; /* 128px : base vertical rhythm between sections */
 }
 
 .dark {
-  /* Le site est dark par défaut — la classe .dark reste alignée */
+  /* Le site est dark par défaut, la classe .dark reste alignée */
   --background: var(--black);
   --foreground: var(--bone);
   --card: var(--black-elevated);

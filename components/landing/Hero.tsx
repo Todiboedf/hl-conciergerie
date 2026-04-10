@@ -21,7 +21,14 @@ const fadeUp = {
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden min-h-screen flex items-center radial-dark grain-overlay pt-32 lg:pt-28">
+    <section
+      className="relative isolate overflow-hidden flex items-start radial-dark grain-overlay"
+      style={{
+        minHeight: "100dvh",
+        paddingTop: "calc(var(--header-height) + 2.5rem)",
+        paddingBottom: "5rem",
+      }}
+    >
       {/* Glow orbs ambiance */}
       <div className="glow-orb h-[600px] w-[600px] -top-40 -left-40 opacity-50" />
       <div className="glow-orb h-[700px] w-[700px] top-1/3 -right-60 opacity-60" />
@@ -37,7 +44,7 @@ export function Hero() {
         }}
       />
 
-      <div className="container-hl relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center pb-20">
+      <div className="container-hl relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
         {/* COLONNE GAUCHE : texte 60% */}
         <div className="lg:col-span-7 max-w-2xl">
           <motion.div
