@@ -1,5 +1,5 @@
 /**
- * H&L Conciergerie — Types partagés
+ * H&L Conciergerie · Types partagés
  */
 
 export type PackId = "essentiel" | "premium" | "signature";

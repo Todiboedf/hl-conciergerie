@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { HLMonogram } from "@/components/ui/HLMonogram";
+import { HLLogo } from "@/components/ui/HLLogo";
 import { PremiumButton } from "@/components/ui/PremiumButton";
 import type { NavLink } from "@/lib/types";
 
@@ -44,21 +44,18 @@ export function Header() {
       )}
     >
       <div className="container-hl flex items-center justify-between py-4 lg:py-5">
-        {/* Logo */}
+        {/* Logo officiel H&L */}
         <Link
           href="/"
-          className="flex items-center gap-3 group"
-          aria-label="H&L Conciergerie — accueil"
+          className="group inline-flex items-center"
+          aria-label="H&L Conciergerie, retour à l'accueil"
         >
-          <HLMonogram size={36} className="transition-transform duration-500 group-hover:scale-105" />
-          <span className="hidden sm:flex flex-col leading-none">
-            <span className="font-display text-[18px] tracking-[0.12em] text-bone">
-              H&L
-            </span>
-            <span className="text-[9px] uppercase tracking-[0.28em] text-pearl mt-0.5">
-              Conciergerie
-            </span>
-          </span>
+          <HLLogo
+            variant="gold"
+            size={96}
+            priority
+            className="transition-transform duration-500 group-hover:scale-[1.03]"
+          />
         </Link>
 
         {/* Desktop nav */}

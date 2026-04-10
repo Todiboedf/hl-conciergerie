@@ -15,7 +15,7 @@ const widthMap: Record<NonNullable<GoldDividerProps["width"]>, string> = {
 };
 
 /**
- * Diviseur horizontal or fin avec point central — motif récurrent
+ * Diviseur horizontal or fin avec point central : motif récurrent
  * de l'identité H&L. À utiliser pour souligner les eyebrow labels
  * et marquer les transitions visuelles entre sections.
  */

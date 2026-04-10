@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { HLMonogram } from "@/components/ui/HLMonogram";
+import { Sparkles } from "lucide-react";
+import { HLLogo } from "@/components/ui/HLLogo";
 import { PremiumButton } from "@/components/ui/PremiumButton";
 import { GoldDivider } from "@/components/ui/GoldDivider";
 
@@ -11,7 +12,7 @@ const fadeUp = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.15 + i * 0.12,
+      delay: 0.15 + i * 0.1,
       duration: 0.9,
       ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
     },
@@ -37,7 +38,7 @@ export function Hero() {
       />
 
       <div className="container-hl relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center pb-20">
-        {/* COLONNE GAUCHE — texte 60% */}
+        {/* COLONNE GAUCHE : texte 60% */}
         <div className="lg:col-span-7 max-w-2xl">
           <motion.div
             custom={0}
@@ -55,14 +56,19 @@ export function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="font-display font-light text-bone leading-[0.95] tracking-[-0.01em]"
-            style={{ fontSize: "clamp(48px, 7vw, 110px)" }}
+            className="font-display font-light text-bone leading-[0.96] tracking-[-0.01em]"
+            style={{
+              fontSize: "clamp(38px, 7vw, 104px)",
+              textWrap: "balance",
+            }}
           >
-            Maximisez vos
-            <br />
-            revenus locatifs
-            <br />
-            <span className="italic text-gold/95">sans vous en occuper.</span>
+            Maximisez vos{" "}
+            <br className="hidden md:block" />
+            revenus locatifs{" "}
+            <br className="hidden md:block" />
+            <span className="italic text-gold/95">
+              sans vous en{"\u00A0"}occuper.
+            </span>
           </motion.h1>
 
           <motion.p
@@ -71,18 +77,43 @@ export function Hero() {
             initial="hidden"
             animate="visible"
             className="mt-10 max-w-xl text-[16px] md:text-[17px] leading-relaxed text-bone/75 font-light"
+            style={{ textWrap: "pretty" }}
           >
-            Une maison de conciergerie haut de gamme dédiée aux propriétaires exigeants
-            de la Côte d&apos;Azur. Gestion totale, optimisation continue, et la sérénité
-            d&apos;un service hôtelier de prestige — pour votre bien comme pour vos hôtes.
+            Une maison de conciergerie haut de gamme dédiée aux propriétaires
+            exigeants de la Côte d&apos;Azur. Gestion totale, optimisation continue,
+            et la sérénité d&apos;un service hôtelier de prestige, pour votre bien
+            comme pour vos hôtes.
           </motion.p>
 
+          {/* Mini-explication Diagnostic : bénéfice en clair */}
           <motion.div
             custom={3}
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="mt-12 flex flex-col sm:flex-row gap-4 sm:items-center"
+            className="mt-10 max-w-xl flex items-start gap-3"
+          >
+            <span
+              aria-hidden="true"
+              className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center border border-gold/40 bg-gold/5"
+            >
+              <Sparkles size={13} strokeWidth={1.5} className="text-gold" />
+            </span>
+            <p
+              className="text-[14px] md:text-[15px] leading-relaxed text-bone/85 font-light"
+              style={{ textWrap: "pretty" }}
+            >
+              Recevez en 2 minutes une estimation personnalisée du revenu que
+              votre bien peut générer à Nice.
+            </p>
+          </motion.div>
+
+          <motion.div
+            custom={4}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="mt-8 flex flex-col sm:flex-row gap-4 sm:items-center"
           >
             <PremiumButton href="/diagnostic" variant="primary" size="lg" withArrow>
               Diagnostic gratuit
@@ -92,12 +123,27 @@ export function Hero() {
             </PremiumButton>
           </motion.div>
 
-          <motion.div
-            custom={4}
+          {/* Sous-phrase explicative : nature de l'outil */}
+          <motion.p
+            custom={5}
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="mt-14 flex items-center gap-6"
+            className="mt-5 flex items-center gap-2 text-[12.5px] italic text-pearl"
+          >
+            <span className="text-gold not-italic text-[15px] leading-none">
+              ›
+            </span>
+            Outil intelligent · estimation propriétaire gratuite et sans
+            inscription
+          </motion.p>
+
+          <motion.div
+            custom={6}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="mt-10 flex items-center gap-6"
           >
             <GoldDivider width="sm" align="left" />
             <p className="text-[11px] uppercase tracking-[0.22em] text-pearl">
@@ -106,10 +152,10 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* COLONNE DROITE — visual 40% */}
+        {/* COLONNE DROITE : visual 40% */}
         <div className="lg:col-span-5 relative flex items-center justify-center lg:justify-end">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               delay: 0.4,
@@ -118,7 +164,7 @@ export function Hero() {
             }}
             className="relative aspect-square w-full max-w-[440px]"
           >
-            {/* Glow concentré derrière le monogramme */}
+            {/* Glow concentré derrière le logo */}
             <div className="glow-orb absolute inset-0 m-auto h-[80%] w-[80%] opacity-90" />
 
             {/* Cadre or fin avec coins typographiques */}
@@ -129,12 +175,9 @@ export function Hero() {
               <CornerOrnament className="absolute -bottom-px -right-px rotate-180" />
               <CornerOrnament className="absolute -bottom-px -left-px -rotate-90" />
 
-              <div className="flex flex-col items-center gap-6 px-8">
-                <HLMonogram size={180} withRing />
+              <div className="flex flex-col items-center gap-8 px-8 py-10">
+                <HLLogo variant="gold" size={300} priority />
                 <div className="flex flex-col items-center gap-2">
-                  <span className="font-display text-2xl tracking-[0.18em] text-bone">
-                    HARMONIE &amp; LUXE
-                  </span>
                   <GoldDivider width="sm" />
                   <span className="text-[10px] uppercase tracking-[0.32em] text-pearl">
                     Maison fondée en 2026
@@ -149,7 +192,7 @@ export function Hero() {
                 01 · Hero
               </span>
               <span className="text-[10px] uppercase tracking-[0.22em] text-pearl/70">
-                Nice — France
+                Nice · France
               </span>
             </div>
           </motion.div>

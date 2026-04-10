@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { Mail, MapPin } from "lucide-react";
-import { HLMonogram } from "@/components/ui/HLMonogram";
+import { HLLogo } from "@/components/ui/HLLogo";
 import { GoldDivider } from "@/components/ui/GoldDivider";
 
-// Lucide v1 a retiré les icônes de marques — SVG inline minimalistes on-brand.
+// Lucide v1 a retiré les icônes de marques : SVG inline minimalistes on-brand.
 function InstagramGlyph({ size = 15 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -62,14 +62,11 @@ export function Footer() {
       <div className="glow-orb h-[500px] w-[500px] -bottom-64 left-1/2 -translate-x-1/2 opacity-30" />
 
       <div className="container-hl relative z-10 pt-24 pb-10">
-        {/* Bloc top : monogramme + signature */}
+        {/* Bloc top : logo officiel + baseline */}
         <div className="flex flex-col items-center text-center mb-16">
-          <HLMonogram size={64} withRing />
-          <h2 className="mt-6 font-display text-3xl md:text-4xl tracking-[0.05em] text-bone">
-            H&amp;L Conciergerie
-          </h2>
-          <p className="mt-3 text-[11px] uppercase tracking-[0.28em] text-pearl">
-            Maison de gestion locative — Nice &amp; Côte d&apos;Azur
+          <HLLogo variant="gold" size={220} />
+          <p className="mt-6 text-[11px] uppercase tracking-[0.28em] text-pearl">
+            Maison de gestion locative · Nice &amp; Côte d&apos;Azur
           </p>
           <GoldDivider className="mt-8" width="md" />
         </div>
@@ -145,7 +142,7 @@ export function Footer() {
         {/* Bottom bar : mentions HL GROUP SAS */}
         <div className="mt-20 pt-8 border-t border-gold/10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
           <p className="text-[11px] tracking-wider text-pearl/80">
-            © {year} <span className="text-bone">HL GROUP SAS</span> — Tous droits réservés.
+            © {year} <span className="text-bone">HL GROUP SAS</span>. Tous droits réservés.
             <br className="md:hidden" />
             <span className="hidden md:inline"> · </span>
             Société par actions simplifiée immatriculée à Nice.

@@ -9,7 +9,7 @@ interface HLMonogramProps {
 }
 
 /**
- * Monogramme signature H&L — réutilisable header / footer / hero / cover.
+ * Monogramme signature H&L, réutilisable header / footer / hero / cover.
  * Construit en SVG pur pour rester crispy à toutes les tailles et tinter
  * via currentColor selon la variante (or signature ou bone).
  */

@@ -23,7 +23,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hlconciergerie.fr";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "H&L Conciergerie — Gestion locative premium à Nice & Côte d'Azur",
+    default: "H&L Conciergerie · Gestion locative premium à Nice & Côte d'Azur",
     template: "%s · H&L Conciergerie",
   },
   description:
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: siteUrl,
     siteName: "H&L Conciergerie",
-    title: "H&L Conciergerie — Gestion locative premium à Nice",
+    title: "H&L Conciergerie · Gestion locative premium à Nice",
     description:
       "Maximisez vos revenus locatifs sans vous en occuper. Conciergerie haut de gamme à Nice & Côte d'Azur.",
   },
