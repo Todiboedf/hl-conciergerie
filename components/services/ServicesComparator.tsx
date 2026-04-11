@@ -255,7 +255,7 @@ export function ServicesComparator() {
         <div className="max-w-3xl mx-auto text-center">
           <motion.span
             variants={fadeUp}
-            className="block text-[11px] font-medium uppercase tracking-[0.22em] text-gold-dark"
+            className="eyebrow-cream block"
           >
             Choisir en un coup d&apos;œil
           </motion.span>

@@ -30,7 +30,7 @@ export function PacksPreview() {
         <div className="max-w-3xl mx-auto text-center">
           <motion.span
             variants={fadeUp}
-            className="block text-[11px] font-medium uppercase tracking-[0.22em] text-gold-dark"
+            className="eyebrow-cream block"
           >
             Trois niveaux d&apos;exigence
           </motion.span>
@@ -44,13 +44,15 @@ export function PacksPreview() {
             className="mt-6 font-display font-light text-black leading-[1.05] tracking-[-0.01em]"
             style={{ fontSize: "clamp(32px, 4vw, 56px)", textWrap: "balance" }}
           >
-            Une gestion sur mesure, adaptée à votre bien.
+            Une gestion{" "}
+            <span className="italic text-gold-dark">sur mesure</span>, adaptée
+            à votre bien.
           </motion.h2>
 
           <motion.p
             variants={fadeUp}
-            className="mt-6 text-[16px] md:text-[17px] leading-relaxed text-black/60 font-light mx-auto"
-            style={{ maxWidth: "620px", textWrap: "pretty" }}
+            className="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-black/60 font-light mx-auto"
+            style={{ maxWidth: "700px", textWrap: "pretty" }}
           >
             Trois packs pour trois niveaux d&apos;ambition. Chacun pensé pour
             optimiser le rendement de votre bien tout en préservant son
@@ -94,11 +96,12 @@ function PackCard({ pack }: { pack: Pack }) {
     <motion.article
       variants={fadeUp}
       className={cn(
-        "relative isolate flex flex-col overflow-hidden backdrop-blur-md transition-all duration-500",
+        "relative isolate flex flex-col overflow-hidden backdrop-blur-md transition-[transform,border-color,background-color,box-shadow] duration-300 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] will-change-transform",
         "bg-white/50 p-10 md:p-12",
+        "hover:-translate-y-0.5",
         isHighlighted
-          ? "border border-gold-dark/60 shadow-[0_20px_80px_-30px_rgba(138,112,48,0.35)] lg:-mt-6 lg:mb-6"
-          : "border border-gold-border/40 hover:border-gold-dark/50",
+          ? "border border-gold-dark/60 shadow-[0_20px_80px_-30px_rgba(138,112,48,0.35)] hover:border-gold-dark/80 lg:-mt-6 lg:mb-6"
+          : "border border-gold-border/40 hover:border-gold-dark/60",
       )}
     >
       {isHighlighted && (
@@ -177,6 +180,29 @@ function PackCard({ pack }: { pack: Pack }) {
             </li>
           ))}
         </ul>
+
+        {/* Mini-teaser de rendement : uniquement sur la carte Premium */}
+        {isHighlighted && (
+          <div className="mt-10 flex flex-col items-center text-center">
+            <div className="h-px w-12 bg-gold-dark/30" />
+            <p className="mt-5 text-[10px] font-medium uppercase tracking-[0.24em] text-gold-dark">
+              Exemple de rendement
+            </p>
+            <p className="mt-3 font-display text-[15px] text-black/80">
+              T3 vue mer · Carré d&apos;Or
+            </p>
+            <p
+              className="mt-2 font-display font-light text-gold-dark leading-none tracking-[-0.01em]"
+              style={{ fontSize: "clamp(22px, 2.2vw, 26px)" }}
+            >
+              3&#8239;600 à 4&#8239;400&nbsp;€
+            </p>
+            <p className="mt-2 text-[11px] uppercase tracking-[0.2em] text-black/50">
+              Net propriétaire / mois
+            </p>
+            <div className="mt-5 h-px w-12 bg-gold-dark/30" />
+          </div>
+        )}
 
         {/* CTA */}
         <div className="mt-10 pt-2">

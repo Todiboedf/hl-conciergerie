@@ -13,7 +13,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Quelle est votre commission et que comprend-elle exactement ?",
     answer:
-      "Nos commissions s'échelonnent de 25 % à 30 % des revenus nets générés, selon le pack retenu (Essentiel, Premium ou Signature). Elles couvrent l'intégralité des opérations courantes : diffusion sur les plateformes, gestion des réservations, accueil des voyageurs, ménage hôtelier, maintenance et conformité réglementaire. Aucun frais caché. Les consommables (linge, produits d'accueil, interventions artisans exceptionnelles) sont refacturés à prix coûtant et documentés dans votre reporting mensuel.",
+      "Nos commissions sont claires et indexées sur le pack retenu : 25 % pour le pack Essentiel, 28 % pour le pack Premium, 30 % pour le pack Signature. Elles s'appliquent sur les revenus nets générés par votre bien, c'est-à-dire après déduction des taxes de séjour et des frais de plateformes (Airbnb, Booking, Vrbo). Sont inclus sans surcoût : la diffusion multi-canal, la gestion complète des réservations, l'accueil des voyageurs, le ménage hôtelier entre chaque séjour, la rotation du linge professionnel, la coordination des prestataires et la conformité réglementaire. Sont facturés à part, toujours à prix coûtant et documentés dans votre reporting mensuel : les consommables voyageurs (produits d'accueil, cosmétiques), la maintenance lourde et les interventions artisans ponctuelles. Aucun frais caché, aucune zone grise : vous savez exactement ce que vous payez et ce que vous recevez.",
   },
   {
     question: "Quelle est la durée d'engagement ?",

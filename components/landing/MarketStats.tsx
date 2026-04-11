@@ -36,7 +36,7 @@ export function MarketStats() {
         <div className="max-w-3xl">
           <motion.span
             variants={fadeUp}
-            className="block text-[11px] font-medium uppercase tracking-[0.22em] text-gold-dark"
+            className="eyebrow-cream block"
           >
             Le marché de Nice en chiffres
           </motion.span>
@@ -46,18 +46,22 @@ export function MarketStats() {
             className="mt-6 font-display font-light text-black leading-[1.05] tracking-[-0.01em]"
             style={{ fontSize: "clamp(32px, 4vw, 56px)", textWrap: "balance" }}
           >
-            Nice, l&apos;un des marchés les plus performants de France.
+            Nice, l&apos;un des marchés les plus{" "}
+            <span className="italic text-gold-dark">performants</span> de
+            France.
           </motion.h2>
 
           <motion.p
             variants={fadeUp}
-            className="mt-6 text-[16px] md:text-[17px] leading-relaxed text-black/60 font-light"
-            style={{ textWrap: "pretty" }}
+            className="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-black/60 font-light"
+            style={{ maxWidth: "700px", textWrap: "pretty" }}
           >
-            La Côte d&apos;Azur concentre la demande touristique la plus dense
-            de France. Ces chiffres, sourcés sur les principaux benchmarks du
-            secteur, justifient une approche professionnelle de la gestion
-            locative.
+            Plus de dix millions de visiteurs chaque année, une saison qui
+            s&apos;étend de février à octobre, un marché locatif courte durée
+            parmi les plus matures d&apos;Europe. Ces chiffres, sourcés sur les
+            benchmarks référents du secteur, expliquent pourquoi Nice attire
+            autant d&apos;investisseurs, et pourquoi la gestion y fait toute la
+            différence.
           </motion.p>
         </div>
 
@@ -70,7 +74,7 @@ export function MarketStats() {
             <motion.article
               key={stat.label}
               variants={fadeUp}
-              className="group relative overflow-hidden border border-gold-border/60 bg-white/40 backdrop-blur-md p-8 md:p-10 transition-all duration-500 hover:border-gold-dark/70 hover:bg-white/60"
+              className="group relative overflow-hidden border border-gold-border/60 bg-white/40 backdrop-blur-md p-8 md:p-10 transition-[transform,border-color,background-color] duration-300 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-gold-dark/70 hover:bg-white/60 will-change-transform"
             >
               <div
                 className="font-display font-light text-gold-dark leading-none tracking-[-0.02em]"

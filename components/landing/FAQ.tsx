@@ -32,7 +32,7 @@ export function FAQ() {
           <div className="lg:col-span-5">
             <motion.span
               variants={fadeUp}
-              className="block text-[11px] font-medium uppercase tracking-[0.22em] text-gold-dark"
+              className="eyebrow-cream block"
             >
               Vos questions, nos réponses
             </motion.span>
@@ -49,13 +49,14 @@ export function FAQ() {
                 textWrap: "balance",
               }}
             >
-              Tout ce que vous voulez savoir avant de nous confier votre bien.
+              Tout ce que vous voulez savoir avant de nous{" "}
+              <span className="italic text-gold-dark">confier votre bien</span>.
             </motion.h2>
 
             <motion.p
               variants={fadeUp}
-              className="mt-6 text-[15px] md:text-[16px] leading-relaxed text-black/60 font-light"
-              style={{ textWrap: "pretty" }}
+              className="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-black/60 font-light"
+              style={{ maxWidth: "700px", textWrap: "pretty" }}
             >
               Si votre question n&apos;apparaît pas ici, n&apos;hésitez pas à
               nous écrire. Nous répondons personnellement à chaque propriétaire
@@ -75,7 +76,7 @@ export function FAQ() {
                   value={`faq-${idx}`}
                   className="border-b-0"
                 >
-                  <AccordionTrigger className="group/trigger py-6 md:py-7 text-left text-black hover:no-underline hover:text-gold-dark focus-visible:ring-0 focus-visible:border-transparent data-[panel-open]:text-gold-dark">
+                  <AccordionTrigger className="group/trigger py-6 md:py-7 text-left text-black cursor-pointer hover:no-underline hover:text-gold-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-dark focus-visible:ring-offset-2 focus-visible:ring-offset-cream data-[panel-open]:text-gold-dark">
                     <span
                       className="font-display text-[18px] md:text-[21px] leading-snug pr-6"
                       style={{ textWrap: "balance" }}

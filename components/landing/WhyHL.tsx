@@ -21,25 +21,25 @@ const REASONS: Reason[] = [
   },
   {
     icon: Cpu,
-    title: "Technologie native",
+    title: "Une technologie au service du détail",
     description:
       "Channel manager, pricing dynamique, outils propriétaires alimentés par l'intelligence artificielle. Notre pile technique maximise le rendement de chaque séjour tout en préservant votre temps.",
   },
   {
     icon: ShieldCheck,
-    title: "Conformité absolue",
+    title: "La conformité comme socle",
     description:
       "Expertise du règlement Nice 2026, de la loi Le Meur, des déclarations LMNP et des obligations préfectorales. Votre bien est géré dans le strict respect du cadre légal, sans stress administratif de votre côté.",
   },
   {
     icon: Users,
-    title: "Réseau partenaires sélectionné",
+    title: "Un réseau choisi avec exigence",
     description:
       "Ménage, linge, artisans, restaurants, activités : chaque partenaire est choisi avec l'exigence d'un hôtelier cinq étoiles. Vos hôtes bénéficient d'une expérience irréprochable, votre bien reste en parfait état.",
   },
   {
     icon: LineChart,
-    title: "Reporting transparent",
+    title: "Une transparence totale, sans zone d'ombre",
     description:
       "Tableau de bord en temps réel, comptes-rendus détaillés, rendez-vous réguliers. Vous savez tout de ce qui se passe dans votre bien. Nos propriétaires ne découvrent jamais leur reporting en fin de mois.",
   },
@@ -66,7 +66,7 @@ export function WhyHL() {
         <div className="max-w-3xl">
           <motion.span
             variants={fadeUp}
-            className="block text-[11px] font-medium uppercase tracking-[0.22em] text-gold-dark"
+            className="eyebrow-cream block"
           >
             Pourquoi H&amp;L
           </motion.span>
@@ -76,13 +76,14 @@ export function WhyHL() {
             className="mt-6 font-display font-light text-black leading-[1.05] tracking-[-0.01em]"
             style={{ fontSize: "clamp(32px, 4vw, 56px)", textWrap: "balance" }}
           >
-            Cinq raisons de nous confier votre bien.
+            Cinq raisons de nous confier{" "}
+            <span className="italic text-gold-dark">votre bien</span>.
           </motion.h2>
 
           <motion.p
             variants={fadeUp}
-            className="mt-6 text-[16px] md:text-[17px] leading-relaxed text-black/60 font-light"
-            style={{ maxWidth: "620px", textWrap: "pretty" }}
+            className="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-black/60 font-light"
+            style={{ maxWidth: "700px", textWrap: "pretty" }}
           >
             Nous ne sommes pas une plateforme automatisée. Nous sommes une
             maison de gestion niçoise, construite brique après brique autour de
@@ -106,7 +107,7 @@ export function WhyHL() {
               <motion.article
                 key={reason.title}
                 variants={fadeUp}
-                className={`group relative flex flex-col border border-gold-border/60 bg-white/40 backdrop-blur-md p-8 md:p-9 transition-all duration-500 hover:border-gold-dark/60 hover:bg-white/60 ${colSpan} ${colStart}`}
+                className={`group relative flex flex-col border border-gold-border/60 bg-white/40 backdrop-blur-md p-8 md:p-9 transition-[transform,border-color,background-color] duration-300 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-gold-dark/70 hover:bg-white/60 will-change-transform ${colSpan} ${colStart}`}
               >
                 <span className="flex h-12 w-12 items-center justify-center border border-gold-dark/40 bg-gold-dark/5 mb-6 transition-all duration-500 group-hover:border-gold-dark/70 group-hover:bg-gold-dark/10">
                   <Icon

@@ -78,10 +78,10 @@ export function Footer() {
             <h3 className="text-[11px] uppercase tracking-[0.22em] text-gold font-medium">
               Contact
             </h3>
-            <div className="space-y-3 text-[14px] text-bone/80">
+            <div className="space-y-3 text-[14px] text-pearl">
               <a
                 href="mailto:contact@hlconciergerie.fr"
-                className="flex items-start gap-3 hover:text-gold transition-colors group"
+                className="flex items-start gap-3 hover:text-gold transition-colors duration-200 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               >
                 <Mail size={15} strokeWidth={1.5} className="mt-0.5 text-gold/70 group-hover:text-gold" />
                 <span>contact@hlconciergerie.fr</span>
@@ -100,7 +100,7 @@ export function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 border border-gold/25 hover:border-gold hover:text-gold transition-colors"
+                className="p-2 border border-gold/25 text-pearl hover:border-gold hover:text-gold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                 aria-label="Instagram H&L Conciergerie"
               >
                 <InstagramGlyph />
@@ -109,7 +109,7 @@ export function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 border border-gold/25 hover:border-gold hover:text-gold transition-colors"
+                className="p-2 border border-gold/25 text-pearl hover:border-gold hover:text-gold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                 aria-label="LinkedIn H&L Conciergerie"
               >
                 <LinkedinGlyph />
@@ -123,12 +123,12 @@ export function Footer() {
               <h3 className="text-[11px] uppercase tracking-[0.22em] text-gold font-medium">
                 {col.title}
               </h3>
-              <ul className="space-y-3 text-[14px] text-bone/80">
+              <ul className="space-y-3 text-[14px] text-pearl">
                 {col.links.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="hover:text-gold transition-colors duration-300"
+                      className="hover:text-gold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                     >
                       {link.label}
                     </Link>

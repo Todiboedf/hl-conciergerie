@@ -26,7 +26,7 @@ export function AboutStory() {
           <div className="lg:col-span-7">
             <motion.span
               variants={fadeUp}
-              className="block text-[11px] font-medium uppercase tracking-[0.22em] text-gold-dark"
+              className="eyebrow-cream block"
             >
               Notre histoire
             </motion.span>
@@ -43,7 +43,8 @@ export function AboutStory() {
                 textWrap: "balance",
               }}
             >
-              Genèse de H&amp;L.
+              <span className="italic text-gold-dark">Genèse</span> de
+              H&amp;L.
             </motion.h2>
 
             <div className="mt-10 space-y-6 text-[15px] md:text-[16px] leading-[1.85] text-black/75 font-light">
@@ -51,59 +52,72 @@ export function AboutStory() {
                 variants={fadeUp}
                 style={{ textWrap: "pretty" }}
               >
-                H&amp;L Conciergerie voit le jour en 2026 à Nice, sous
-                l&apos;impulsion de deux associés de longue date. L&apos;un
-                vient du monde de la technologie et du marketing
-                d&apos;acquisition, l&apos;autre de l&apos;opérationnel et du
-                service client en hôtellerie haut de gamme. Leur rencontre
-                professionnelle date de plusieurs années&nbsp;; leur
-                complémentarité est devenue, au fil du temps, une évidence.
+                H&amp;L Conciergerie est née de l&apos;amitié et de la
+                conviction partagée de ses deux co-fondateurs, Guillaume Haas
+                et Henry Lieater. Le H et le L du nom portent leurs initiales,
+                et se lisent également comme Harmonie &amp; Luxe. Tous deux
+                ont grandi au contact de l&apos;immobilier azuréen&nbsp;:
+                leurs familles respectives évoluent depuis plusieurs décennies
+                dans le secteur de la gestion, de la transaction et de
+                l&apos;investissement sur la Côte d&apos;Azur. De cette
+                exposition précoce, ils ont reçu un double héritage&nbsp;:
+                la rigueur opérationnelle d&apos;un métier où rien ne
+                s&apos;improvise, et le sens du service qui distingue les
+                maisons de gestion les plus respectées.
               </motion.p>
 
               <motion.p
                 variants={fadeUp}
                 style={{ textWrap: "pretty" }}
               >
-                Pendant plusieurs saisons, tous deux observent le marché
-                niçois de la location courte durée. Ils y voient un
-                paradoxe&nbsp;: des biens magnifiques, un marché parmi les
-                plus performants d&apos;Europe, et pourtant une grande
-                majorité de propriétaires mal servis par des plateformes
-                automatisées ou des conciergeries opportunistes. Le standard
-                hôtelier cinq étoiles qu&apos;ils connaissent dans leur vie
-                professionnelle reste, pour la gestion locative premium, une
-                exception.
+                À force d&apos;observer le marché niçois de la location
+                courte durée, un constat commun s&apos;est imposé. D&apos;un
+                côté, des plateformes automatisées qui délivrent un service
+                standardisé, sans attention réelle portée aux biens qu&apos;elles
+                gèrent. De l&apos;autre, des acteurs locaux traditionnels,
+                sérieux mais souvent en peine de professionnaliser leurs
+                outils et leur communication. Entre ces deux mondes, une
+                place était à prendre&nbsp;: celle d&apos;une maison
+                niçoise qui combinerait la technologie native des meilleurs
+                opérateurs tech et la proximité terrain d&apos;une conciergerie
+                locale. Cette place, c&apos;est celle que H&amp;L a choisi
+                d&apos;occuper.
               </motion.p>
 
               <motion.p
                 variants={fadeUp}
                 style={{ textWrap: "pretty" }}
               >
-                L&apos;idée prend forme en fin d&apos;année 2025&nbsp;: bâtir
-                une maison de gestion qui traite chaque bien comme une suite
-                d&apos;hôtel particulier, chaque voyageur comme un hôte
-                précieux et chaque propriétaire comme un partenaire de long
-                terme. Pas une plateforme. Pas un prestataire. Une
-                maison&nbsp;: un lieu, une équipe, une signature.
+                Leur complémentarité structure la maison. Guillaume porte la
+                dimension technologique, marketing et stratégique&nbsp;:
+                outils propriétaires (channel management, pricing dynamique,
+                reporting en temps réel, diagnostic de rentabilité),
+                positionnement de marque, communication et développement
+                commercial. Henry porte la dimension opérationnelle, la
+                relation propriétaire et l&apos;exécution quotidienne&nbsp;:
+                coordination des interventions, accueil des voyageurs, suivi
+                des partenaires, qualité terrain au jour le jour. Deux regards
+                distincts, une même exigence.
               </motion.p>
 
               <motion.p
                 variants={fadeUp}
                 style={{ textWrap: "pretty" }}
               >
-                Le nom H&amp;L, pour Harmonie &amp; Luxe, condense cette
-                ambition. L&apos;harmonie, parce que nous croyons qu&apos;un
-                bien bien géré est un bien qui respire&nbsp;: rythme saisonnier
-                juste, accueil chaleureux, entretien continu, relation sereine
-                avec le propriétaire. Le luxe, parce que nous refusons
-                d&apos;en rabattre sur l&apos;exigence du service, du choix
-                des partenaires et du soin accordé à chaque détail. La maison
-                ouvre ses portes au printemps 2026.
+                H&amp;L n&apos;est pas une plateforme qui cherche à prendre en
+                gestion autant de biens que possible. C&apos;est une maison
+                qui choisit soigneusement ses propriétaires, limite
+                volontairement son nombre de mandats, et se donne pour
+                ambition de devenir la référence de la gestion locative
+                premium à Nice et sur la Côte d&apos;Azur. Un engagement que
+                les deux fondateurs assument personnellement, dès la première
+                visite de qualification jusqu&apos;au rendez-vous trimestriel
+                de reporting.
               </motion.p>
             </div>
           </div>
 
-          {/* Colonne droite : citation */}
+          {/* Colonne droite : citation fondatrice */}
           <div className="lg:col-span-5 lg:sticky lg:top-32">
             <motion.div variants={fadeUp}>
               <GlassCard
@@ -115,22 +129,23 @@ export function AboutStory() {
                 </span>
 
                 <blockquote
-                  className="mt-8 font-display font-light italic text-black leading-[1.3]"
+                  className="mt-8 font-display font-light italic text-black/85 leading-[1.35]"
                   style={{
-                    fontSize: "clamp(22px, 2.2vw, 28px)",
-                    textWrap: "balance",
+                    fontSize: "clamp(22px, 2.2vw, 26px)",
+                    textWrap: "pretty",
                   }}
                 >
-                  «&nbsp;Nous avons bâti H&amp;L parce que nous voulions,
-                  avant tout, être les propriétaires de nos propres clients.
-                  Si nous ne confierions pas notre bien à cette maison, c&apos;est
-                  que nous n&apos;avons pas encore fini de la construire.&nbsp;»
+                  «&nbsp;Nous avons grandi avec l&apos;immobilier. Nous savons
+                  ce que c&apos;est qu&apos;un bien bien tenu, et ce que
+                  c&apos;est qu&apos;un bien mal géré. H&amp;L est la maison
+                  que nous aurions voulu trouver pour nos propres
+                  parents.&nbsp;»
                 </blockquote>
 
                 <div className="mt-8 h-px w-12 bg-gold-dark/40" />
 
-                <p className="mt-6 text-[11px] uppercase tracking-[0.22em] text-gold-dark font-medium">
-                  Les fondateurs · Nice, 2026
+                <p className="mt-6 text-[12px] uppercase tracking-[0.22em] text-gold-dark font-medium">
+                  Guillaume Haas &amp; Henry Lieater · Co-fondateurs
                 </p>
               </GlassCard>
             </motion.div>

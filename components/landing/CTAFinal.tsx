@@ -1,10 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ShieldCheck, Lock, Sparkles } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { PremiumButton } from "@/components/ui/PremiumButton";
 import { GoldDivider } from "@/components/ui/GoldDivider";
 import { HLLogo } from "@/components/ui/HLLogo";
 import { fadeUp, staggerContainer, viewInProps } from "@/lib/motion";
+
+interface ReassuranceItem {
+  icon: LucideIcon;
+  label: string;
+}
+
+const REASSURANCES: ReassuranceItem[] = [
+  { icon: ShieldCheck, label: "Conformité Nice 2026" },
+  { icon: Lock, label: "Données confidentielles" },
+  { icon: Sparkles, label: "Zéro engagement" },
+];
 
 /**
  * Section 10 : CTAFinal
@@ -80,11 +93,13 @@ export function CTAFinal() {
           style={{
             fontSize: "clamp(36px, 6vw, 80px)",
             maxWidth: "880px",
-            textWrap: "balance",
+            textWrap: "pretty",
           }}
         >
-          Confiez votre bien à une maison qui{" "}
-          <span className="italic text-gold/95">le mérite</span>.
+          Confiez votre bien à une maison{" "}
+          <br className="hidden md:block" />
+          qui{"\u00A0"}
+          <span className="italic text-gold/95">le&nbsp;mérite</span>.
         </motion.h2>
 
         <motion.p
@@ -115,6 +130,32 @@ export function CTAFinal() {
             Nous contacter
           </PremiumButton>
         </motion.div>
+
+        {/* 3 mini-pictos de réassurance */}
+        <motion.ul
+          variants={fadeUp}
+          className="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-5"
+        >
+          {REASSURANCES.map((item) => {
+            const Icon = item.icon;
+            return (
+              <li
+                key={item.label}
+                className="flex items-center gap-2.5"
+              >
+                <Icon
+                  size={16}
+                  strokeWidth={1.5}
+                  className="text-gold"
+                  aria-hidden="true"
+                />
+                <span className="text-[12px] uppercase tracking-[0.22em] text-pearl">
+                  {item.label}
+                </span>
+              </li>
+            );
+          })}
+        </motion.ul>
 
         {/* Réassurance finale */}
         <motion.p

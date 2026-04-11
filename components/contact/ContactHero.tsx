@@ -46,13 +46,18 @@ export function ContactHero() {
 
         <motion.p
           variants={fadeUp}
-          className="mx-auto mt-10 text-[16px] md:text-[17px] leading-[1.8] text-pearl font-light"
-          style={{ maxWidth: "680px", textWrap: "pretty" }}
+          className="mx-auto mt-10 text-[17px] md:text-[18px] leading-[1.6] text-pearl font-light"
+          style={{ maxWidth: "700px", textWrap: "pretty" }}
         >
           Nous répondons personnellement à chaque demande sous 24 heures.
           Dites-nous en quelques mots ce qui vous amène, et nous reviendrons
           vers vous avec nos premières pistes.
         </motion.p>
+
+        {/* Séparateur de transition vers la section formulaire */}
+        <motion.div variants={fadeUp} className="mt-16">
+          <GoldDivider width="md" />
+        </motion.div>
       </motion.div>
     </section>
   );

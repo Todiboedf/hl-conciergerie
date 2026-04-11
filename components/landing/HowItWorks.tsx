@@ -33,7 +33,7 @@ const STEPS: Step[] = [
     icon: Coins,
     title: "Vous percevez vos revenus en toute sérénité",
     description:
-      "Pendant que vous vaquez à vos occupations, nous orchestrons l'ensemble : accueil premium des voyageurs, ménage hôtelier, maintenance, conformité. Chaque fin de mois, un reporting transparent et le reversement de vos revenus nets, simplement.",
+      "Chaque mois, vos revenus nets sont reversés sur votre compte, accompagnés d'un reporting détaillé. Vous savez exactement ce qui s'est passé dans votre bien : qui est venu, combien ils ont payé, quelles maintenances ont été effectuées, quelles optimisations sont envisagées pour le mois suivant. La transparence est totale, la tranquillité aussi.",
   },
 ];
 
@@ -67,7 +67,8 @@ export function HowItWorks() {
             className="mt-6 font-display font-light text-bone leading-[1.05] tracking-[-0.01em]"
             style={{ fontSize: "clamp(32px, 4vw, 56px)", textWrap: "balance" }}
           >
-            De la première rencontre à votre tranquillité.
+            De la première rencontre à votre{" "}
+            <span className="italic text-gold/95">tranquillité</span>.
           </motion.h2>
         </div>
 
@@ -82,7 +83,7 @@ export function HowItWorks() {
               <motion.article
                 key={step.roman}
                 variants={fadeUp}
-                className="group relative flex flex-col border border-white/10 bg-white/[0.03] backdrop-blur-sm p-8 md:p-10 transition-all duration-500 hover:border-gold/40 hover:bg-white/[0.05]"
+                className="group relative flex flex-col border border-white/10 bg-white/[0.03] backdrop-blur-sm p-8 md:p-10 transition-[transform,border-color,background-color] duration-300 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-gold/50 hover:bg-white/[0.05] will-change-transform"
               >
                 {/* Numéro romain + icône */}
                 <div className="flex items-start justify-between">

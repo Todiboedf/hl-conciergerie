@@ -16,21 +16,21 @@ interface MiniFeature {
 const FEATURES: MiniFeature[] = [
   {
     icon: MapPin,
-    title: "Quartier par quartier",
+    title: "Analyse par quartier",
     description:
-      "Analyse de votre adresse avec les tendances réelles de chaque zone de Nice et de la Côte d'Azur.",
+      "Carré d'Or, Mont-Boron, Libération : chaque zone a son potentiel.",
   },
   {
     icon: TrendingUp,
-    title: "Yield optimisé",
+    title: "Yield saisonnier",
     description:
-      "Croisement ADR, saisonnalité et taux d'occupation pour calibrer la fourchette de revenus attendue.",
+      "Pondération haute, moyenne et basse saison incluse.",
   },
   {
     icon: FileText,
-    title: "Recommandations personnalisées",
+    title: "Pack recommandé",
     description:
-      "Points forts, leviers d'optimisation concrets et pack H&L le plus adapté à votre bien.",
+      "Essentiel, Premium ou Signature selon votre bien.",
   },
 ];
 
@@ -88,11 +88,13 @@ export function DiagnosticTeaser() {
           style={{
             fontSize: "clamp(36px, 6vw, 80px)",
             maxWidth: "900px",
-            textWrap: "balance",
+            textWrap: "pretty",
           }}
         >
-          Combien votre bien peut-il vraiment rapporter à{" "}
-          <span className="italic text-gold/95">Nice</span>&nbsp;?
+          Combien votre bien peut-il{" "}
+          <br className="hidden md:block" />
+          vraiment rapporter à{"\u00A0"}
+          <span className="italic text-gold/95">Nice&nbsp;?</span>
         </motion.h2>
 
         <motion.p

@@ -160,25 +160,36 @@
     overflow-x: hidden;
   }
 
+  /* Sélection de texte on-brand : fond or, texte noir */
   ::selection {
-    background-color: var(--gold);
+    background-color: rgba(201, 168, 76, 0.3);
+    color: var(--black);
+  }
+  ::-moz-selection {
+    background-color: rgba(201, 168, 76, 0.3);
     color: var(--black);
   }
 
-  /* Scrollbar discret on-brand */
+  /* Scrollbar discret on-brand : 8px, thumb gold/30, hover gold/60 */
   ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: var(--black);
+    background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: rgba(201, 168, 76, 0.18);
+    background: rgba(201, 168, 76, 0.3);
     border-radius: 0;
+    transition: background 200ms ease-out;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(201, 168, 76, 0.35);
+    background: rgba(201, 168, 76, 0.6);
+  }
+  /* Firefox */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(201, 168, 76, 0.3) transparent;
   }
 }
 
@@ -201,6 +212,16 @@
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--gold);
+  }
+
+  /* Variante d'eyebrow pour sections cream : or sombre pour le contraste */
+  .eyebrow-cream {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
   }
 
   /* Conteneur premium consistent */

@@ -115,8 +115,23 @@ export function Hero() {
             </p>
           </motion.div>
 
+          {/* Micro-label d'argumentaire : déplacé ICI pour ne pas chevaucher le
+              scroll indicator "Découvrir" en bas du viewport. */}
           <motion.div
             custom={4}
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="mt-8 flex items-center gap-6"
+          >
+            <GoldDivider width="sm" align="left" />
+            <p className="text-[11px] uppercase tracking-[0.22em] text-pearl">
+              Estimation personnalisée · 2 minutes · sans engagement
+            </p>
+          </motion.div>
+
+          <motion.div
+            custom={5}
             variants={fadeUp}
             initial="hidden"
             animate="visible"
@@ -132,7 +147,7 @@ export function Hero() {
 
           {/* Sous-phrase explicative : nature de l'outil */}
           <motion.p
-            custom={5}
+            custom={6}
             variants={fadeUp}
             initial="hidden"
             animate="visible"
@@ -144,19 +159,6 @@ export function Hero() {
             Outil intelligent · estimation propriétaire gratuite et sans
             inscription
           </motion.p>
-
-          <motion.div
-            custom={6}
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            className="mt-10 flex items-center gap-6"
-          >
-            <GoldDivider width="sm" align="left" />
-            <p className="text-[11px] uppercase tracking-[0.22em] text-pearl">
-              Estimation personnalisée · 2 minutes · sans engagement
-            </p>
-          </motion.div>
         </div>
 
         {/* COLONNE DROITE : visual 40% */}
@@ -202,6 +204,32 @@ export function Hero() {
                 Nice · France
               </span>
             </div>
+
+            {/* Mini-card preuve sociale : chiffre clef du marché Nice.
+                Volontairement secondaire visuellement par rapport au cadre logo. */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 1.1,
+                duration: 1,
+                ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
+              }}
+              className="mt-6 ml-auto w-full max-w-[280px] border border-gold/25 bg-white/[0.035] backdrop-blur-md px-6 py-5"
+            >
+              <div
+                className="font-display font-light text-gold-dark leading-none tracking-[-0.015em]"
+                style={{ fontSize: "clamp(40px, 4.2vw, 48px)" }}
+              >
+                37&#8239;000&nbsp;€
+              </div>
+              <p className="mt-3 text-[11.5px] uppercase tracking-[0.18em] text-pearl leading-[1.5]">
+                Revenu médian annuel d&apos;un bien géré à Nice
+              </p>
+              <p className="mt-2 italic text-[10px] text-pearl/60 leading-none">
+                Source&nbsp;: Airbtics 2025
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </div>

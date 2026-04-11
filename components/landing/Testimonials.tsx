@@ -40,7 +40,8 @@ export function Testimonials() {
             className="mt-6 font-display font-light text-bone leading-[1.05] tracking-[-0.01em]"
             style={{ fontSize: "clamp(32px, 4vw, 56px)", textWrap: "balance" }}
           >
-            Une nouvelle maison naît cette saison.
+            Une nouvelle maison{" "}
+            <span className="italic text-gold/95">naît cette saison</span>.
           </motion.h2>
 
           <motion.p
@@ -48,11 +49,13 @@ export function Testimonials() {
             className="mt-8 text-[15px] md:text-[16px] leading-[1.8] text-pearl font-light mx-auto"
             style={{ maxWidth: "700px", textWrap: "pretty" }}
           >
-            H&amp;L Conciergerie débute ses opérations cette saison à Nice. Les
-            premiers retours de nos propriétaires fondateurs seront publiés ici
-            dans les semaines qui viennent. En attendant, nous serons heureux
-            de vous présenter notre méthode lors d&apos;un rendez-vous
-            personnalisé.
+            H&amp;L Conciergerie accueille cette saison ses premiers
+            propriétaires fondateurs. Leurs témoignages seront publiés ici dans
+            les semaines qui viennent, et nous sommes déjà honorés de la
+            confiance qu&apos;ils nous portent. En attendant, nous serons
+            heureux de vous présenter notre maison et notre méthode lors
+            d&apos;un rendez-vous personnalisé, à notre bureau ou en
+            visioconférence.
           </motion.p>
         </div>
 

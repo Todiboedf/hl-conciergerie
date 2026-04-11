@@ -48,11 +48,13 @@ export function ServicesCTA() {
           style={{
             fontSize: "clamp(32px, 5vw, 64px)",
             maxWidth: "820px",
-            textWrap: "balance",
+            textWrap: "pretty",
           }}
         >
-          Une question sur le pack qui vous{" "}
-          <span className="italic text-gold/95">conviendrait</span>&#8239;?
+          Une question sur le pack{" "}
+          <br className="hidden md:block" />
+          qui vous{"\u00A0"}
+          <span className="italic text-gold/95">conviendrait&#8239;?</span>
         </motion.h2>
 
         <motion.p

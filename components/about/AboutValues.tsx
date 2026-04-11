@@ -58,7 +58,7 @@ export function AboutValues() {
         <div className="max-w-3xl mx-auto text-center">
           <motion.span
             variants={fadeUp}
-            className="block text-[11px] font-medium uppercase tracking-[0.22em] text-gold-dark"
+            className="eyebrow-cream block"
           >
             Nos valeurs
           </motion.span>
@@ -75,7 +75,8 @@ export function AboutValues() {
               textWrap: "balance",
             }}
           >
-            Quatre valeurs que nous tenons sans exception.
+            Quatre valeurs tenues{" "}
+            <span className="italic text-gold-dark">sans exception</span>.
           </motion.h2>
         </div>
 
@@ -89,7 +90,7 @@ export function AboutValues() {
               <motion.article
                 key={value.title}
                 variants={fadeUp}
-                className="group relative flex flex-col border border-gold-border/60 bg-white/40 backdrop-blur-md p-10 md:p-12 transition-all duration-500 hover:border-gold-dark/60 hover:bg-white/60"
+                className="group relative flex flex-col border border-gold-border/60 bg-white/40 backdrop-blur-md p-10 md:p-12 transition-[transform,border-color,background-color] duration-300 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-gold-dark/70 hover:bg-white/60 will-change-transform"
               >
                 <span className="flex h-14 w-14 items-center justify-center border border-gold-dark/40 bg-gold-dark/5 mb-8 transition-all duration-500 group-hover:border-gold-dark/70 group-hover:bg-gold-dark/10">
                   <Icon

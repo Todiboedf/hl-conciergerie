@@ -20,7 +20,7 @@ export function AboutCTA() {
       >
         <motion.span
           variants={fadeUp}
-          className="block text-[11px] font-medium uppercase tracking-[0.22em] text-gold-dark"
+          className="eyebrow-cream block"
         >
           Rencontrer la maison
         </motion.span>

@@ -78,11 +78,11 @@ export function ServicesPackDetail() {
           const profile = PACK_PROFILES[pack.id];
           const isLast = idx === PACKS.length - 1;
           return (
-            <div key={pack.id} id={pack.id}>
+            <div key={pack.id} id={pack.id} className="scroll-mt-28">
               <motion.article
                 {...viewInProps}
                 variants={staggerContainer}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start scroll-mt-28"
+                className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start"
               >
                 {/* Colonne gauche : identité pack + features */}
                 <div className="lg:col-span-7">
@@ -259,6 +259,15 @@ export function ServicesPackDetail() {
             </div>
           );
         })}
+
+        {/* Séparateur de transition vers ServicesFAQ */}
+        <motion.div
+          {...viewInProps}
+          variants={fadeUp}
+          className="mt-20 md:mt-24"
+        >
+          <GoldDivider width="md" />
+        </motion.div>
       </div>
     </section>
   );

@@ -75,7 +75,8 @@ export function AboutCompliance() {
               textWrap: "balance",
             }}
           >
-            Une maison rigoureuse sur le cadre réglementaire.
+            Une maison rigoureuse sur le{" "}
+            <span className="italic text-gold/95">cadre réglementaire</span>.
           </motion.h2>
 
           <motion.p
@@ -100,7 +101,7 @@ export function AboutCompliance() {
               <motion.article
                 key={item.title}
                 variants={fadeUp}
-                className="group relative flex flex-col border border-white/10 bg-white/[0.03] backdrop-blur-md p-8 md:p-10 transition-all duration-500 hover:border-gold/40 hover:bg-white/[0.05]"
+                className="group relative flex flex-col border border-white/10 bg-white/[0.03] backdrop-blur-md p-8 md:p-10 transition-[transform,border-color,background-color] duration-300 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-gold/50 hover:bg-white/[0.05] will-change-transform"
               >
                 <span className="flex h-12 w-12 items-center justify-center border border-gold/40 bg-gold/5 mb-6 transition-all duration-500 group-hover:border-gold/70 group-hover:bg-gold/10">
                   <Icon

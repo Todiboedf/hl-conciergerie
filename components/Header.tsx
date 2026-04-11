@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -16,7 +17,15 @@ const NAV_LINKS: NavLink[] = [
   { label: "Contact", href: "/contact" },
 ];
 
+/** Retourne true si le lien correspond à la page courante. */
+function isLinkActive(pathname: string | null, href: string): boolean {
+  if (!pathname) return false;
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export function Header() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -60,15 +69,32 @@ export function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-10">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-[12px] uppercase tracking-[0.18em] text-bone/80 hover:text-gold transition-colors duration-300"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const active = isLinkActive(pathname, link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={active ? "page" : undefined}
+                className={cn(
+                  "relative text-[12px] uppercase tracking-[0.18em] transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-black",
+                  active
+                    ? "text-gold"
+                    : "text-bone/80 hover:text-gold",
+                )}
+              >
+                <span className="relative">
+                  {link.label}
+                  {active && (
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute left-0 right-0 -bottom-1.5 h-px bg-gold"
+                    />
+                  )}
+                </span>
+              </Link>
+            );
+          })}
         </nav>
 
         {/* CTA desktop + burger mobile */}
@@ -81,7 +107,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setMobileOpen((v) => !v)}
-            className="lg:hidden p-2 text-bone hover:text-gold transition-colors"
+            className="lg:hidden p-2 text-bone hover:text-gold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer"
             aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={mobileOpen}
           >
@@ -100,16 +126,23 @@ export function Header() {
         )}
       >
         <nav className="container-hl flex flex-col gap-1 py-10">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="font-display text-3xl tracking-wide text-bone hover:text-gold transition-colors py-4 border-b border-gold/10"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const active = isLinkActive(pathname, link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                aria-current={active ? "page" : undefined}
+                className={cn(
+                  "font-display text-3xl tracking-wide py-4 border-b border-gold/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black",
+                  active ? "text-gold" : "text-bone hover:text-gold",
+                )}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <div className="pt-8">
             <PremiumButton
               href="/diagnostic"

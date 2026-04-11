@@ -37,14 +37,14 @@ const sizeMap: Record<Size, string> = {
 };
 
 const baseClasses =
-  "group relative inline-flex items-center justify-center gap-2 overflow-hidden font-sans uppercase tracking-[0.18em] font-medium transition-all duration-500 ease-out cursor-pointer select-none whitespace-nowrap";
+  "group relative inline-flex items-center justify-center gap-2 overflow-hidden font-sans uppercase tracking-[0.18em] font-medium cursor-pointer select-none whitespace-nowrap transition-[transform,box-shadow,background-color,border-color,color] duration-200 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] will-change-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black";
 
 function getVariantClasses(variant: Variant) {
   switch (variant) {
     case "primary":
-      return "bg-gold text-black border border-gold hover:bg-gold-dark hover:border-gold-dark hover:shadow-[0_0_40px_-8px_rgba(201,168,76,0.55)]";
+      return "bg-gold text-black border border-gold hover:bg-gold-dark hover:border-gold-dark hover:-translate-y-px hover:scale-[1.015] hover:shadow-[0_8px_24px_-8px_rgba(201,168,76,0.4)]";
     case "secondary":
-      return "bg-transparent text-bone border border-gold/50 hover:border-gold hover:bg-gold/5 hover:shadow-[0_0_40px_-12px_rgba(201,168,76,0.45)]";
+      return "bg-transparent text-bone border border-gold/50 hover:border-gold hover:bg-gold/5 hover:-translate-y-px hover:scale-[1.015] hover:shadow-[0_8px_24px_-10px_rgba(201,168,76,0.35)]";
     case "ghost":
       return "bg-transparent text-bone border border-transparent hover:text-gold";
   }

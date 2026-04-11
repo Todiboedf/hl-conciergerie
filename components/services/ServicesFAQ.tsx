@@ -32,7 +32,7 @@ export function ServicesFAQ() {
           <div className="lg:col-span-5">
             <motion.span
               variants={fadeUp}
-              className="block text-[11px] font-medium uppercase tracking-[0.22em] text-gold-dark"
+              className="eyebrow-cream block"
             >
               Questions fréquentes sur nos packs
             </motion.span>
@@ -49,13 +49,14 @@ export function ServicesFAQ() {
                 textWrap: "balance",
               }}
             >
-              Ce que nos propriétaires nous demandent le plus souvent.
+              Ce que nos propriétaires nous demandent{" "}
+              <span className="italic text-gold-dark">le plus souvent</span>.
             </motion.h2>
 
             <motion.p
               variants={fadeUp}
-              className="mt-6 text-[15px] md:text-[16px] leading-relaxed text-black/60 font-light"
-              style={{ maxWidth: "480px", textWrap: "pretty" }}
+              className="mt-6 text-[17px] md:text-[18px] leading-[1.6] text-black/60 font-light"
+              style={{ maxWidth: "700px", textWrap: "pretty" }}
             >
               Commission, facturation, services à la carte, changement de
               pack en cours de mandat : voici les points qui reviennent le
@@ -72,7 +73,7 @@ export function ServicesFAQ() {
                   value={`faq-services-${idx}`}
                   className="border-b-0"
                 >
-                  <AccordionTrigger className="group/trigger py-6 md:py-7 text-left text-black hover:no-underline hover:text-gold-dark focus-visible:ring-0 focus-visible:border-transparent data-[panel-open]:text-gold-dark">
+                  <AccordionTrigger className="group/trigger py-6 md:py-7 text-left text-black cursor-pointer hover:no-underline hover:text-gold-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-dark focus-visible:ring-offset-2 focus-visible:ring-offset-cream data-[panel-open]:text-gold-dark">
                     <span
                       className="font-display text-[18px] md:text-[21px] leading-snug pr-6"
                       style={{ textWrap: "balance" }}
@@ -88,6 +89,11 @@ export function ServicesFAQ() {
             </Accordion>
           </motion.div>
         </div>
+
+        {/* Séparateur de transition */}
+        <motion.div variants={fadeUp} className="mt-20">
+          <GoldDivider width="md" />
+        </motion.div>
       </motion.div>
     </section>
   );

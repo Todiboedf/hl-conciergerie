@@ -1,8 +1,34 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { BedDouble, Users, Handshake } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { GoldDivider } from "@/components/ui/GoldDivider";
 import { fadeUp, staggerContainer, viewInProps } from "@/lib/motion";
+
+interface PhilosophyBullet {
+  icon: LucideIcon;
+  eyebrow: string;
+  copy: string;
+}
+
+const BULLETS: PhilosophyBullet[] = [
+  {
+    icon: BedDouble,
+    eyebrow: "Comme une suite",
+    copy: "Chaque bien préparé avec l'œil d'un hôtelier.",
+  },
+  {
+    icon: Users,
+    eyebrow: "Comme un hôte",
+    copy: "Chaque voyageur accueilli personnellement.",
+  },
+  {
+    icon: Handshake,
+    eyebrow: "Comme un partenaire",
+    copy: "Chaque propriétaire informé en toute transparence.",
+  },
+];
 
 /**
  * Section 02 : Promise
@@ -52,9 +78,44 @@ export function Promise() {
           terme.&nbsp;»
         </motion.blockquote>
 
+        {/* 3 sous-bullets horizontaux, incarnent les 3 engagements de la citation */}
+        <motion.ul
+          variants={staggerContainer}
+          className="mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12"
+          style={{ maxWidth: "920px" }}
+        >
+          {BULLETS.map((bullet) => {
+            const Icon = bullet.icon;
+            return (
+              <motion.li
+                key={bullet.eyebrow}
+                variants={fadeUp}
+                className="flex flex-col items-center text-center"
+              >
+                <span
+                  aria-hidden="true"
+                  className="flex h-10 w-10 items-center justify-center border border-gold/35 bg-gold/[0.04]"
+                >
+                  <Icon
+                    size={16}
+                    strokeWidth={1.4}
+                    className="text-gold"
+                  />
+                </span>
+                <p className="mt-5 text-[10.5px] uppercase tracking-[0.28em] text-gold font-medium">
+                  {bullet.eyebrow}
+                </p>
+                <p className="mt-3 text-[13.5px] md:text-[14px] leading-[1.7] text-bone/80 font-light">
+                  {bullet.copy}
+                </p>
+              </motion.li>
+            );
+          })}
+        </motion.ul>
+
         <motion.p
           variants={fadeUp}
-          className="mx-auto mt-12 text-[15px] md:text-[16px] leading-[1.8] text-pearl font-light"
+          className="mx-auto mt-16 text-[15px] md:text-[16px] leading-[1.8] text-pearl font-light"
           style={{ maxWidth: "620px", textWrap: "pretty" }}
         >
           Nous croyons qu&apos;une conciergerie premium se mesure à trois

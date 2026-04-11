@@ -8,40 +8,28 @@ import { fadeUp, staggerContainer, viewInProps } from "@/lib/motion";
 interface Founder {
   name: string;
   role: string;
-  title: string;
-  bio: string[];
-  focus: string;
+  description: string;
 }
 
 const FOUNDERS: Founder[] = [
   {
     name: "Guillaume Haas",
-    role: "Co-fondateur",
-    title: "Direction technologie & acquisition",
-    bio: [
-      "Guillaume a construit sa carrière à la croisée de la technologie produit et du marketing d'acquisition. Il a dirigé pendant plusieurs années la stratégie digitale de maisons hôtelières et de projets de luxe, où il a appris que la technologie ne vaut que par ce qu'elle permet à l'humain de mieux faire.",
-      "Chez H&L, il pilote l'infrastructure technique de la maison : outils propriétaires, pricing dynamique, acquisition qualifiée et relation digitale avec les propriétaires. Son obsession : que chaque système que nous construisons libère du temps pour le service réel, celui qui se joue en face-à-face avec un hôte ou un voyageur.",
-    ],
-    focus:
-      "Tech · marketing · pricing dynamique · relation digitale propriétaire",
+    role: "Co-fondateur · Direction tech & marketing",
+    description:
+      "Guillaume dirige la partie technologique et marketing de H&L. Il est responsable des outils propriétaires de la maison (channel management, pricing dynamique, reporting en temps réel, diagnostic de rentabilité), de la stratégie de positionnement et du développement commercial. Issu d'une famille profondément ancrée dans l'immobilier azuréen, il a nourri très tôt une conviction : les meilleurs outils ne remplacent jamais l'attention humaine, mais ils en décuplent la valeur quand ils sont pensés intelligemment.",
   },
   {
-    name: "L'associé opérations",
-    role: "Co-fondateur",
-    title: "Direction opérations & relation client",
-    bio: [
-      "Son parcours est celui d'un opérationnel formé aux standards de l'hôtellerie cinq étoiles : management d'équipes terrain, excellence d'accueil, coordination des partenaires, rigueur de l'exécution. Il a dirigé pendant plusieurs années des équipes de service en maisons de prestige sur la Côte d'Azur, où il a appris l'art discret et exigeant de l'hospitalité française.",
-      "Chez H&L, il porte la promesse hôtelière sur le terrain. C'est lui qui rencontre les propriétaires, qui sélectionne les partenaires, qui forme les équipes opérationnelles et qui garantit qu'aucun bien ne reçoit un traitement en dessous du standard que nous nous sommes fixé.",
-    ],
-    focus:
-      "Opérations · relation propriétaire · partenaires · qualité terrain",
+    name: "Henry Lieater",
+    role: "Co-fondateur · Direction opérations & relation propriétaires",
+    description:
+      "Henry dirige la partie opérationnelle et la relation propriétaires. Il orchestre quotidiennement les interventions terrain, l'accueil des voyageurs, la coordination des partenaires (ménage, maintenance, artisans) et la qualité de l'expérience livrée dans chaque bien. Comme Guillaume, il a grandi au contact du secteur immobilier de la Côte d'Azur. Il porte l'exigence hôtelière dans le quotidien opérationnel de la maison, avec une conviction simple : ce sont les détails qu'on soigne qui distinguent une bonne gestion d'une excellente gestion.",
   },
 ];
 
 /**
- * Section "Les deux associés". Fond noir. 2 cards fondateurs avec
- * monogramme H&L circulaire en guise de photo placeholder, nom,
- * rôle, biographie (2 paragraphes), focus professionnel.
+ * Section "Les deux fondateurs". Fond noir. 2 cards fondateurs avec
+ * monogramme H&L circulaire or (120px), nom, rôle, biographie.
+ * Injecte les vrais fondateurs : Guillaume Haas et Henry Lieater.
  */
 export function AboutTeam() {
   return (
@@ -57,13 +45,13 @@ export function AboutTeam() {
         variants={staggerContainer}
         className="container-hl relative z-10 py-24 md:py-32"
       >
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto text-center">
           <motion.span variants={fadeUp} className="eyebrow block">
             Notre équipe
           </motion.span>
 
           <motion.div variants={fadeUp} className="mt-6">
-            <GoldDivider width="sm" align="left" />
+            <GoldDivider width="sm" />
           </motion.div>
 
           <motion.h2
@@ -74,21 +62,22 @@ export function AboutTeam() {
               textWrap: "balance",
             }}
           >
-            Les deux associés.
+            Les deux <span className="italic text-gold/95">fondateurs</span>.
           </motion.h2>
 
           <motion.p
             variants={fadeUp}
-            className="mt-6 text-[15px] md:text-[16px] leading-relaxed text-bone/70 font-light"
+            className="mt-6 mx-auto text-[15px] md:text-[16px] leading-relaxed text-bone/70 font-light"
             style={{ maxWidth: "620px", textWrap: "pretty" }}
           >
-            H&amp;L est dirigée par deux co-fondateurs complémentaires, qui
-            se partagent la supervision de la maison. Vous les rencontrez
-            tous les deux dès la première visite de qualification.
+            H&amp;L est dirigée par deux co-fondateurs amis de longue date,
+            dont la complémentarité structure chaque aspect de la maison. Vous
+            les rencontrez tous les deux dès la première visite de
+            qualification.
           </motion.p>
         </div>
 
-        {/* Grid 2 cards */}
+        {/* Grid 2 cards fondateurs */}
         <motion.div
           variants={staggerContainer}
           className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
@@ -97,61 +86,46 @@ export function AboutTeam() {
             <motion.article
               key={founder.name}
               variants={fadeUp}
-              className="group relative flex flex-col border border-white/10 bg-white/[0.03] backdrop-blur-md p-10 md:p-12 transition-all duration-500 hover:border-gold/40 hover:bg-white/[0.05]"
+              className="group relative flex flex-col items-center text-center border border-white/10 bg-white/[0.03] backdrop-blur-md p-10 md:p-12 transition-[transform,border-color,background-color] duration-300 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-gold/50 hover:bg-white/[0.05] will-change-transform"
             >
-              {/* Avatar monogramme circulaire */}
-              <div className="flex items-start gap-6">
-                <div className="relative shrink-0">
-                  <div
-                    aria-hidden="true"
-                    className="absolute inset-0 rounded-full blur-2xl opacity-40"
-                    style={{
-                      background:
-                        "radial-gradient(circle, rgba(201,168,76,0.4) 0%, transparent 70%)",
-                    }}
-                  />
-                  <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-gold/40 bg-black/40 backdrop-blur-sm">
-                    <HLMonogram size={44} variant="gold" />
-                  </div>
-                </div>
-
-                <div className="flex-1 min-w-0 pt-2">
-                  <p className="text-[11px] uppercase tracking-[0.22em] text-gold font-medium">
-                    {founder.role}
-                  </p>
-                  <h3
-                    className="mt-2 font-display font-normal text-bone leading-tight"
-                    style={{ fontSize: "clamp(22px, 2vw, 28px)" }}
-                  >
-                    {founder.name}
-                  </h3>
-                  <p className="mt-2 text-[13px] text-bone/65 font-light italic">
-                    {founder.title}
-                  </p>
+              {/* Monogramme circulaire or ~120px */}
+              <div className="relative shrink-0">
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 rounded-full blur-2xl opacity-50"
+                  style={{
+                    background:
+                      "radial-gradient(circle, rgba(201,168,76,0.45) 0%, transparent 70%)",
+                  }}
+                />
+                <div className="relative flex h-[120px] w-[120px] items-center justify-center rounded-full border border-gold/50 bg-black/40 backdrop-blur-sm transition-colors duration-500 group-hover:border-gold/80">
+                  <HLMonogram size={56} variant="gold" />
                 </div>
               </div>
+
+              {/* Nom */}
+              <h3
+                className="mt-8 font-display font-normal text-bone leading-tight"
+                style={{ fontSize: "28px" }}
+              >
+                {founder.name}
+              </h3>
+
+              {/* Rôle */}
+              <p className="mt-3 text-[11px] uppercase tracking-[0.22em] text-gold font-medium">
+                {founder.role}
+              </p>
 
               {/* Séparateur */}
-              <div className="mt-8 h-px w-full bg-gold/20" />
+              <div className="mt-6 h-px w-12 bg-gold/40 transition-all duration-500 group-hover:w-20" />
 
-              {/* Bio */}
-              <div className="mt-8 space-y-4 text-[14px] md:text-[14.5px] leading-[1.75] text-bone/75 font-light flex-1">
-                {founder.bio.map((para, idx) => (
-                  <p key={idx} style={{ textWrap: "pretty" }}>
-                    {para}
-                  </p>
-                ))}
-              </div>
-
-              {/* Focus */}
-              <div className="mt-8 pt-6 border-t border-gold/15">
-                <p className="text-[10px] uppercase tracking-[0.22em] text-pearl/80">
-                  Rôle dans la maison
-                </p>
-                <p className="mt-2 text-[12.5px] text-bone/85 font-light">
-                  {founder.focus}
-                </p>
-              </div>
+              {/* Description */}
+              <p
+                className="mt-6 text-[14.5px] leading-[1.75] text-pearl font-light"
+                style={{ textWrap: "pretty" }}
+              >
+                {founder.description}
+              </p>
             </motion.article>
           ))}
         </motion.div>
