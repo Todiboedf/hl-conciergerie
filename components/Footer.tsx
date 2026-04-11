@@ -48,7 +48,7 @@ const navColumns = [
     links: [
       { label: "Mentions légales", href: "/mentions-legales" },
       { label: "Confidentialité", href: "/confidentialite" },
-      { label: "CGV", href: "/mentions-legales#cgv" },
+      { label: "CGV", href: "/cgv" },
     ],
   },
 ];
