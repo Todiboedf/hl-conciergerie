@@ -19,7 +19,11 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hlconciergerie.fr";
+// Fallback Vercel preview pour le premier déploiement (sans domaine custom).
+// Une fois le domaine hlconciergerie.fr branché, définir NEXT_PUBLIC_SITE_URL
+// sur Vercel pour basculer les meta Open Graph sur le domaine final.
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://hl-conciergerie.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
