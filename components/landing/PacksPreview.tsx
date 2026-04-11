@@ -210,11 +210,8 @@ function PackCard({ pack }: { pack: Pack }) {
             href={`/services#${pack.id}`}
             variant={isHighlighted ? "primary" : "secondary"}
             size="md"
-            className={cn(
-              "w-full",
-              !isHighlighted &&
-                "border-gold-dark/60 text-black hover:border-gold-dark hover:bg-gold-dark/5 hover:text-black",
-            )}
+            onCream={!isHighlighted}
+            className="w-full"
             withArrow
           >
             Voir le détail

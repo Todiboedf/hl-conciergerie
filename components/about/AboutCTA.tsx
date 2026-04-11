@@ -60,7 +60,12 @@ export function AboutCTA() {
           <PremiumButton href="/contact" variant="primary" size="lg" withArrow>
             Nous contacter
           </PremiumButton>
-          <PremiumButton href="/diagnostic" variant="secondary" size="lg">
+          <PremiumButton
+            href="/diagnostic"
+            variant="secondary"
+            size="lg"
+            onCream
+          >
             Lancer mon diagnostic
           </PremiumButton>
         </motion.div>

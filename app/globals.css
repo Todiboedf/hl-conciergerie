@@ -160,6 +160,16 @@
     overflow-x: hidden;
   }
 
+  /* Compensation du Header fixed pour les ancres (#essentiel, #faq, etc.)
+     et les titres quand on scrolle dessus. */
+  section[id],
+  [id]:is(section, article, div, h1, h2, h3),
+  h1,
+  h2,
+  h3 {
+    scroll-margin-top: calc(var(--header-height) + 2rem);
+  }
+
   /* Sélection de texte on-brand : fond or, texte noir */
   ::selection {
     background-color: rgba(201, 168, 76, 0.3);
@@ -272,5 +282,49 @@
   .will-animate {
     opacity: 0;
     transform: translateY(20px);
+  }
+}
+
+/* ============================================================
+   PRINT — force visibility of animated elements
+   ============================================================
+   Sans cette règle, les éléments Framer Motion `whileInView`
+   restent à opacity 0 / translateY lors de l'impression PDF
+   (pas d'IntersectionObserver en mode print). On force donc
+   chaque élément à son état final visible, et on désactive
+   animations et transitions pour une capture propre. */
+@media print {
+  * {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+    filter: none !important;
+  }
+
+  /* Fonds sombres → conversion print-friendly */
+  body,
+  section,
+  header,
+  footer {
+    background: #ffffff !important;
+    color: #0a0a0a !important;
+  }
+
+  /* Masquer les glow orbs et grain overlay qui alourdissent l'impression */
+  .glow-orb,
+  .grain-overlay::after,
+  [aria-hidden="true"]:is([class*="glow"], [class*="pattern"]) {
+    display: none !important;
+  }
+
+  /* Header et Footer : simplification pour l'impression */
+  header {
+    position: static !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
   }
 }

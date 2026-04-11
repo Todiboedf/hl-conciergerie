@@ -134,7 +134,8 @@ export function ContactSection() {
                 href="#formulaire"
                 variant="secondary"
                 size="md"
-                className="w-full sm:w-auto border-gold-dark/60 text-black hover:border-gold-dark hover:bg-gold-dark/5 hover:text-black"
+                onCream
+                className="w-full sm:w-auto"
               >
                 Réserver un créneau
               </PremiumButton>

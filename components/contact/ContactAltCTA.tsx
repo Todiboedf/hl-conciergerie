@@ -44,7 +44,7 @@ export function ContactAltCTA() {
         className="container-hl relative z-10 py-24 md:py-32 text-center"
       >
         <motion.span variants={fadeUp} className="eyebrow block">
-          Autre option
+          Avant de nous écrire
         </motion.span>
 
         <motion.div variants={fadeUp} className="mt-8">
@@ -57,11 +57,13 @@ export function ContactAltCTA() {
           style={{
             fontSize: "clamp(28px, 4vw, 52px)",
             maxWidth: "780px",
-            textWrap: "balance",
+            textWrap: "pretty",
           }}
         >
-          Si vous préférez commencer par une{" "}
-          <span className="italic text-gold/95">estimation</span>.
+          Si vous préférez commencer{" "}
+          <br className="hidden md:block" />
+          par{"\u00A0"}
+          <span className="italic text-gold/95">une&nbsp;estimation</span>.
         </motion.h2>
 
         <motion.p

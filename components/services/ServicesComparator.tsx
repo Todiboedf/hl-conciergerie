@@ -298,8 +298,8 @@ export function ServicesComparator() {
                 <TableHead className="w-[42%] min-w-[200px] h-auto py-6 px-4 md:px-6 text-left text-[11px] font-medium uppercase tracking-[0.18em] text-gold-dark whitespace-normal">
                   Prestation
                 </TableHead>
-                <TableHead className="w-[19.33%] h-auto py-6 px-3 text-center text-[11px] font-medium uppercase tracking-[0.18em] text-black/60 whitespace-normal">
-                  <div className="flex flex-col items-center gap-1">
+                <TableHead className="w-[19.33%] h-auto py-6 px-3 align-bottom text-center text-[11px] font-medium uppercase tracking-[0.18em] text-black/60 whitespace-normal">
+                  <div className="flex h-full flex-col items-center justify-end gap-1">
                     <span className="font-display text-[18px] md:text-[22px] font-normal text-black not-uppercase tracking-normal normal-case">
                       {essentiel.name}
                     </span>
@@ -308,15 +308,14 @@ export function ServicesComparator() {
                     </span>
                   </div>
                 </TableHead>
-                <TableHead className="w-[19.33%] h-auto py-6 px-3 text-center relative whitespace-normal bg-gold-dark/[0.06]">
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="inline-flex items-center gap-2 border border-gold-dark/60 bg-cream px-3 py-1 text-[9px] uppercase tracking-[0.22em] text-gold-dark font-medium whitespace-nowrap">
+                <TableHead className="w-[19.33%] h-auto py-6 px-3 align-bottom text-center whitespace-normal bg-gold-dark/[0.06]">
+                  <div className="flex h-full flex-col items-center justify-end gap-1">
+                    {/* Badge intégré au flux normal pour éviter toute coupure */}
+                    <span className="mb-3 inline-flex items-center gap-2 border border-gold-dark/60 bg-cream px-3 py-1 text-[9px] uppercase tracking-[0.22em] text-gold-dark font-medium whitespace-nowrap">
                       <span className="block h-1 w-1 rotate-45 bg-gold-dark" />
                       Le plus choisi
                       <span className="block h-1 w-1 rotate-45 bg-gold-dark" />
                     </span>
-                  </div>
-                  <div className="flex flex-col items-center gap-1 pt-2">
                     <span className="font-display text-[18px] md:text-[22px] font-normal text-black not-uppercase tracking-normal normal-case">
                       {premium.name}
                     </span>
@@ -325,8 +324,8 @@ export function ServicesComparator() {
                     </span>
                   </div>
                 </TableHead>
-                <TableHead className="w-[19.33%] h-auto py-6 px-3 text-center text-[11px] font-medium uppercase tracking-[0.18em] text-black/60 whitespace-normal">
-                  <div className="flex flex-col items-center gap-1">
+                <TableHead className="w-[19.33%] h-auto py-6 px-3 align-bottom text-center text-[11px] font-medium uppercase tracking-[0.18em] text-black/60 whitespace-normal">
+                  <div className="flex h-full flex-col items-center justify-end gap-1">
                     <span className="font-display text-[18px] md:text-[22px] font-normal text-black not-uppercase tracking-normal normal-case">
                       {signature.name}
                     </span>
