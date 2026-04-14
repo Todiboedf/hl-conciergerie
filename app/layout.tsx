@@ -33,6 +33,7 @@ export const metadata: Metadata = {
   },
   description:
     "Conciergerie haut de gamme spécialisée dans la location courte durée à Nice et sur la Côte d'Azur. Maximisez vos revenus locatifs sans vous en occuper.",
+  alternates: { canonical: "/" },
   keywords: [
     "conciergerie Nice",
     "gestion locative Nice",
