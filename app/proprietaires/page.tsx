@@ -1,24 +1,20 @@
 import type { Metadata } from "next";
-import { ComingSoon } from "@/components/placeholder/ComingSoon";
+import { ProprietairesPage } from "@/components/proprietaires/ProprietairesPage";
 
 export const metadata: Metadata = {
-  title: "Propriétaires · Bientôt",
+  title: "Propriétaires · Gestion locative premium à Nice",
   description:
-    "Une page dédiée aux propriétaires H&L Conciergerie sera bientôt disponible. En attendant, contactez-nous directement ou lancez votre diagnostic gratuit.",
+    "Confiez votre bien à H&L Conciergerie. Gestion totale, optimisation continue, conformité assurée. Diagnostic gratuit en deux minutes, sans engagement.",
   alternates: { canonical: "/proprietaires" },
+  openGraph: {
+    title: "Propriétaires · H&L Conciergerie",
+    description:
+      "Gestion locative courte durée premium à Nice et sur la Côte d'Azur. Diagnostic gratuit et sans engagement.",
+    url: "/proprietaires",
+    type: "website",
+  },
 };
 
-export default function ProprietairesPage() {
-  return (
-    <ComingSoon
-      eyebrow="Espace propriétaires"
-      title="Votre univers, bientôt."
-      italicWord="bientôt"
-      description="Une page dédiée aux propriétaires, détaillant notre méthode, nos cas d'usage et les témoignages de la maison, est en cours de préparation. En attendant, prenez contact avec nous directement, ou lancez votre diagnostic de rentabilité en deux minutes."
-      primaryCtaHref="/diagnostic"
-      primaryCtaLabel="Lancer mon diagnostic"
-      secondaryCtaHref="/contact"
-      secondaryCtaLabel="Nous contacter"
-    />
-  );
+export default function Page() {
+  return <ProprietairesPage />;
 }

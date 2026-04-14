@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
+import { ClarityAnalytics } from "@/components/ClarityAnalytics";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-display",
@@ -33,6 +34,7 @@ export const metadata: Metadata = {
   },
   description:
     "Conciergerie haut de gamme spécialisée dans la location courte durée à Nice et sur la Côte d'Azur. Maximisez vos revenus locatifs sans vous en occuper.",
+  alternates: { canonical: "/" },
   keywords: [
     "conciergerie Nice",
     "gestion locative Nice",
@@ -69,6 +71,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <Toaster position="top-right" richColors closeButton />
+        <ClarityAnalytics />
       </body>
     </html>
   );
