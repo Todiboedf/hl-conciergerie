@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/sonner";
+import { ClarityAnalytics } from "@/components/ClarityAnalytics";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-display",
@@ -70,6 +71,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <Toaster position="top-right" richColors closeButton />
+        <ClarityAnalytics />
       </body>
     </html>
   );
