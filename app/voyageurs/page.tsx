@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { ComingSoon } from "@/components/placeholder/ComingSoon";
+import { VoyageursPage } from "@/components/voyageurs/VoyageursPage";
 
 export const metadata: Metadata = {
-  title: "Voyageurs · Bientôt",
+  title: "Voyageurs · Séjours d'exception à Nice & Côte d'Azur",
   description:
     "La réservation directe de nos adresses sur la Côte d'Azur arrive prochainement. En attendant, nos biens restent accessibles via Airbnb, Booking et Vrbo.",
   alternates: { canonical: "/voyageurs" },
+  openGraph: {
+    title: "Voyageurs · H&L Conciergerie",
+    description:
+      "Séjours haut de gamme sur la Côte d'Azur, accueil personnalisé et conciergerie 7j/7.",
+    url: "/voyageurs",
+    type: "website",
+  },
 };
 
 export default function VoyageursPage() {
