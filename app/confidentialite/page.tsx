@@ -20,7 +20,8 @@ export default function ConfidentialitePage() {
       <LegalSection number="1." title="Responsable du traitement">
         <p>
           Le responsable du traitement est <strong>HL GROUP SAS</strong>,
-          société par actions simplifiée, siège social à Nice
+          société par actions simplifiée{" "}
+          <strong>{"en cours d'immatriculation"}</strong> à Nice
           (Alpes-Maritimes, France), agissant sous l&apos;enseigne commerciale{" "}
           <strong>H&amp;L Conciergerie</strong>. Toute demande relative au
           traitement de vos données personnelles peut être adressée à :{" "}

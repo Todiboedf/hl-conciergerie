@@ -21,13 +21,15 @@ export default function CGVPage() {
         <p>
           Les présentes conditions générales de service (ci-après les
           «&nbsp;Conditions&nbsp;») ont pour objet de définir les modalités
-          selon lesquelles <strong>HL GROUP SAS</strong>, agissant sous
-          l&apos;enseigne commerciale <strong>H&amp;L Conciergerie</strong>{" "}
-          (ci-après «&nbsp;H&amp;L&nbsp;» ou «&nbsp;la Maison&nbsp;»),
-          fournit à toute personne physique ou morale (ci-après le
-          «&nbsp;Propriétaire&nbsp;») des prestations de gestion locative
-          courte durée sur des biens immobiliers meublés situés à Nice et
-          sur la Côte d&apos;Azur.
+          selon lesquelles la société <strong>HL GROUP SAS</strong>, société
+          par actions simplifiée{" "}
+          <strong>{"en cours d'immatriculation"}</strong> à Nice
+          (Alpes-Maritimes), agissant sous l&apos;enseigne commerciale{" "}
+          <strong>H&amp;L Conciergerie</strong> (ci-après «&nbsp;H&amp;L&nbsp;»
+          ou «&nbsp;la Maison&nbsp;»), fournit à toute personne physique ou
+          morale (ci-après le «&nbsp;Propriétaire&nbsp;») des prestations de
+          gestion locative courte durée sur des biens immobiliers meublés
+          situés à Nice et sur la Côte d&apos;Azur.
         </p>
         <p>
           Toute signature d&apos;un mandat de gestion avec H&amp;L implique

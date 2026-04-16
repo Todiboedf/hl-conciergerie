@@ -19,21 +19,41 @@ export default function MentionsLegalesPage() {
     >
       <LegalSection number="1." title="Éditeur du site">
         <p>
-          Le site <strong>hlconciergerie.fr</strong> est édité par la société{" "}
-          <strong>HL GROUP SAS</strong>, société par actions simplifiée au
-          capital de 10 000 €, dont le siège social est situé à Nice
+          Le site <strong>hlconciergerie.fr</strong> est édité par{" "}
+          <strong>HL GROUP SAS</strong> — société par actions simplifiée{" "}
+          <strong>{"en cours d'immatriculation"}</strong> à Nice
           (Alpes-Maritimes, France).
         </p>
-        <p>
-          Numéro d&apos;immatriculation : RCS Nice 000 000 000 · SIRET 000 000
-          000 00000 · TVA intracommunautaire FR00 000 000 000. L&apos;ensemble
-          de ces identifiants est mis à jour sur cette page dès la
-          finalisation des formalités d&apos;immatriculation.
+        <ul className="mt-4 space-y-2 list-disc list-outside pl-6 marker:text-gold-dark">
+          <li>Capital social&nbsp;: 10&nbsp;000&nbsp;€</li>
+          <li>
+            Siège social&nbsp;: Nice, adresse précise communiquée sur demande
+            (en cours de domiciliation officielle).
+          </li>
+          <li>
+            Représentants légaux&nbsp;: Guillaume Haas et Luis-Henry Lietaer,
+            cofondateurs.
+          </li>
+        </ul>
+        <p className="mt-4">
+          Les identifiants RCS, SIRET et numéro de TVA intracommunautaire
+          seront publiés sur cette page dès réception du Kbis, conformément
+          à l&apos;article 6-III de la loi n° 2004-575 du 21 juin 2004 (LCEN).
         </p>
         <p>
-          Activité : conciergerie et gestion locative courte durée premium,
-          à Nice et sur la Côte d&apos;Azur, sous l&apos;enseigne commerciale{" "}
-          <strong>H&amp;L Conciergerie</strong>.
+          Activité&nbsp;: conciergerie et gestion locative courte durée
+          premium, à Nice et sur la Côte d&apos;Azur, sous l&apos;enseigne
+          commerciale <strong>H&amp;L Conciergerie</strong>.
+        </p>
+        <p>
+          Contact éditeur&nbsp;:{" "}
+          <a
+            href="mailto:contact@hlconciergerie.fr"
+            className="text-gold-dark underline underline-offset-4"
+          >
+            contact@hlconciergerie.fr
+          </a>
+          .
         </p>
       </LegalSection>
 
