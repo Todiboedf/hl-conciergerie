@@ -4,7 +4,7 @@ import { ComingSoon } from "@/components/placeholder/ComingSoon";
 export const metadata: Metadata = {
   title: "Voyageurs · Bientôt",
   description:
-    "Une page dédiée aux voyageurs de H&L Conciergerie sera bientôt disponible. Contactez-nous pour toute demande de séjour d'exception sur la Côte d'Azur.",
+    "La réservation directe de nos adresses sur la Côte d'Azur arrive prochainement. En attendant, nos biens restent accessibles via Airbnb, Booking et Vrbo.",
   alternates: { canonical: "/voyageurs" },
 };
 
@@ -12,9 +12,9 @@ export default function VoyageursPage() {
   return (
     <ComingSoon
       eyebrow="Voyageurs"
-      title="Votre séjour d'exception, bientôt."
+      title="Nos adresses, bientôt en réservation directe."
       italicWord="bientôt"
-      description="Une sélection de nos adresses signature et un espace dédié à la réservation seront présentés ici dans les semaines à venir. En attendant, écrivez-nous pour toute demande particulière : nous ferons le nécessaire pour vous orienter vers le bien qui correspond à votre séjour."
+      description="Nos biens se réservent aujourd'hui via Airbnb, Booking et Vrbo. Prochainement, nous proposerons la réservation directe sur ce site : fiches biens, calendrier temps réel et paiement sécurisé. D'ici là, écrivez-nous pour toute demande particulière."
       primaryCtaHref="/contact"
       primaryCtaLabel="Nous contacter"
       secondaryCtaHref="/services"
