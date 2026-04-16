@@ -20,7 +20,7 @@ Site vitrine premium pour HL GROUP SAS, conciergerie haut de gamme à Nice et su
 | --------------------- | ---------------------------------------------- |
 | `/`                   | Landing principale (hero, packs, diagnostic)   |
 | `/services`           | Détail des 3 packs (Essentiel, Premium, Signature) et tableau comparatif |
-| `/a-propos`           | Histoire, fondateurs Haas & Lieater, valeurs, conformité |
+| `/a-propos`           | Histoire, fondateurs Haas & Lietaer, valeurs, conformité |
 | `/contact`            | Formulaire de contact et infos directes        |
 | `/diagnostic`         | Outil de diagnostic de rentabilité (bientôt)   |
 | `/proprietaires`      | Espace propriétaires (bientôt)                 |

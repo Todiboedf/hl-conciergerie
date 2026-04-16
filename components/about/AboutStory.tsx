@@ -54,7 +54,7 @@ export function AboutStory() {
               >
                 H&amp;L Conciergerie est née de l&apos;amitié et de la
                 conviction partagée de ses deux co-fondateurs, Guillaume Haas
-                et Henry Lieater. Le H et le L du nom portent leurs initiales,
+                et Luis-Henry Lietaer. Le H et le L du nom portent leurs initiales,
                 et se lisent également comme Harmonie &amp; Luxe. Tous deux
                 ont grandi au contact de l&apos;immobilier azuréen&nbsp;:
                 leurs familles respectives évoluent depuis plusieurs décennies
@@ -93,7 +93,7 @@ export function AboutStory() {
                 outils propriétaires (channel management, pricing dynamique,
                 reporting en temps réel, diagnostic de rentabilité),
                 positionnement de marque, communication et développement
-                commercial. Henry porte la dimension opérationnelle, la
+                commercial. Luis-Henry porte la dimension opérationnelle, la
                 relation propriétaire et l&apos;exécution quotidienne&nbsp;:
                 coordination des interventions, accueil des voyageurs, suivi
                 des partenaires, qualité terrain au jour le jour. Deux regards
@@ -145,7 +145,7 @@ export function AboutStory() {
                 <div className="mt-8 h-px w-12 bg-gold-dark/40" />
 
                 <p className="mt-6 text-[12px] uppercase tracking-[0.22em] text-gold-dark font-medium">
-                  Guillaume Haas &amp; Henry Lieater · Co-fondateurs
+                  Guillaume Haas &amp; Luis-Henry Lietaer · Co-fondateurs
                 </p>
               </GlassCard>
             </motion.div>
