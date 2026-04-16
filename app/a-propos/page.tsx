@@ -10,7 +10,7 @@ import { AboutCTA } from "@/components/about/AboutCTA";
 export const metadata: Metadata = {
   title: "Notre maison · Histoire, équipe, valeurs",
   description:
-    "Découvrez H&L Conciergerie : l'histoire de la maison, ses deux co-fondateurs Guillaume Haas et Henry Lieater, ses valeurs, et son engagement de conformité réglementaire à Nice.",
+    "Découvrez H&L Conciergerie : l'histoire de la maison, ses deux co-fondateurs Guillaume Haas et Luis-Henry Lietaer, ses valeurs, et son engagement de conformité réglementaire à Nice.",
   alternates: { canonical: "/a-propos" },
 };
 

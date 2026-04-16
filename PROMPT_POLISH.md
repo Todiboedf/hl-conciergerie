@@ -1,6 +1,6 @@
 # Passe de polish globale H&L Conciergerie
 
-Sessions 1, 2, 3 validées. On fait une PASSE DE POLISH GLOBALE pour corriger les bugs visuels, harmoniser la landing au niveau qualitatif de /services et /a-propos, ET réécrire /a-propos avec les vrais fondateurs Guillaume Haas et Henry Lieater.
+Sessions 1, 2, 3 validées. On fait une PASSE DE POLISH GLOBALE pour corriger les bugs visuels, harmoniser la landing au niveau qualitatif de /services et /a-propos, ET réécrire /a-propos avec les vrais fondateurs Guillaume Haas et Luis-Henry Lietaer.
 
 Ne touche PAS à /diagnostic (reste ComingSoon jusqu'à Session 4).
 Ne touche PAS à /cgv, /mentions-legales, /confidentialite sauf typos.
@@ -118,11 +118,11 @@ IMPORTANT : La page /a-propos a ete creee en Session 3 avec placeholder. Il faut
 H&L Conciergerie a ete fondee par deux amis :
 
 1. Guillaume Haas, co-fondateur, responsable tech, marketing, strategie et developpement. Le H de H&L vient de son nom de famille.
-2. Henry Lieater, co-fondateur, responsable operations, relation proprietaires, coordination terrain et execution quotidienne. Le L de H&L vient de son nom de famille.
+2. Luis-Henry Lietaer, co-fondateur, responsable operations, relation proprietaires, coordination terrain et execution quotidienne. Le L de H&L vient de son nom de famille.
 
 Les deux fondateurs ont grandi au contact de l'immobilier : leurs parents respectifs evoluent depuis plusieurs decennies dans le secteur immobilier de la Cote d'Azur (gestion, transaction, investissement). Cette exposition precoce leur a transmis un double heritage : la rigueur operationnelle d'un metier ou rien ne s'improvise, et le sens du service qui distingue les maisons de gestion les plus respectees.
 
-Le nom "H&L" porte leurs deux initiales (Haas et Lieater) et se lit aussi comme "Harmonie & Luxe", deux valeurs qui resument leur promesse : une gestion locative ou l'execution est sans friction pour le proprietaire, et ou l'experience offerte aux voyageurs est constamment pensee comme celle d'un hotel cinq etoiles.
+Le nom "H&L" porte leurs deux initiales (Haas et Lietaer) et se lit aussi comme "Harmonie & Luxe", deux valeurs qui resument leur promesse : une gestion locative ou l'execution est sans friction pour le proprietaire, et ou l'experience offerte aux voyageurs est constamment pensee comme celle d'un hotel cinq etoiles.
 
 Ce qui les a decides a fonder H&L en 2026 : le constat qu'a Nice, le marche de la gestion locative courte duree est partage entre des plateformes automatisees qui delivrent un service standardise sans attention portee au bien, et des acteurs locaux traditionnels qui peinent a professionnaliser leurs outils et leur communication. Entre les deux, une place etait a prendre pour une maison qui combine la technologie native (channel management, pricing dynamique, reporting en temps reel) et la proximite terrain d'une conciergerie nicoise. Cette place, c'est celle que H&L a choisi d'occuper.
 
@@ -136,16 +136,16 @@ Verifie que le h1 a un italique dore signature (ex : "Une maison fondee sur l'ex
 
 Remplace le contenu generique par un recit en 4 paragraphes :
 
-- P1 : Origine du nom H&L (Haas et Lieater, double sens Harmonie & Luxe). Deux amis, familles de l'immobilier Cote d'Azur depuis plusieurs decennies.
+- P1 : Origine du nom H&L (Haas et Lietaer, double sens Harmonie & Luxe). Deux amis, familles de l'immobilier Cote d'Azur depuis plusieurs decennies.
 - P2 : Constat commun du marche nicois. Entre plateformes automatisees et acteurs locaux traditionnels, place a prendre pour une maison qui allie technologie native et proximite terrain.
-- P3 : Leur complementarite. Guillaume : dimension tech, marketing, strategie (outils proprietaires, communication, developpement commercial). Henry : dimension operationnelle, relation proprietaires et execution quotidienne (coordination interventions, accueil voyageurs, suivi partenaires).
+- P3 : Leur complementarite. Guillaume : dimension tech, marketing, strategie (outils proprietaires, communication, developpement commercial). Luis-Henry : dimension operationnelle, relation proprietaires et execution quotidienne (coordination interventions, accueil voyageurs, suivi partenaires).
 - P4 : Leur engagement. H&L n'est pas une plateforme qui prend autant de biens que possible. Maison qui choisit soigneusement ses proprietaires, limite volontairement son nombre de mandats, objectif devenir reference de la gestion locative premium a Nice et Cote d'Azur.
 
 Cote droit : GlassCard avec citation fondatrice en italique Cormorant 22-26px pearl :
 
 "Nous avons grandi avec l'immobilier. Nous savons ce que c'est qu'un bien bien tenu et ce que c'est qu'un bien mal gere. H&L est la maison que nous aurions voulu trouver pour nos propres parents."
 
-Attribution Inter 12px gold letterspaced : "GUILLAUME HAAS & HENRY LIEATER · CO-FONDATEURS"
+Attribution Inter 12px gold letterspaced : "GUILLAUME HAAS & LUIS-HENRY LIETAER · CO-FONDATEURS"
 
 **3. NOUVELLE SECTION "Le nom H&L"**
 
@@ -155,7 +155,7 @@ Entre "Notre histoire" et "Les deux fondateurs", ajoute une section dediee au no
 - Titre h2 serif : "Deux lettres, deux heritages, une maison."
 - Texte en 2 courts paragraphes :
 
-"H&L porte les initiales de ses deux co-fondateurs, Haas et Lieater. Deux amis, deux familles de l'immobilier azureen, deux sensibilites complementaires."
+"H&L porte les initiales de ses deux co-fondateurs, Haas et Lietaer. Deux amis, deux familles de l'immobilier azureen, deux sensibilites complementaires."
 
 "Mais H&L se lit aussi comme Harmonie & Luxe. L'harmonie, c'est celle qui s'installe quand un proprietaire peut enfin confier son bien en toute confiance. Le luxe, c'est celui d'un service pense avec l'exigence d'un hotel de prestige. Les deux reunies definissent notre promesse."
 
@@ -173,13 +173,13 @@ CARD 1 : Guillaume Haas
 
 "Guillaume dirige la partie technologique et marketing de H&L. Il est responsable des outils proprietaires de la maison (channel management, pricing dynamique, reporting en temps reel, diagnostic de rentabilite), de la strategie de positionnement et du developpement commercial. Issu d'une famille profondement ancree dans l'immobilier azureen, il a nourri tres tot une conviction : les meilleurs outils ne remplacent jamais l'attention humaine, mais ils en decuplent la valeur quand ils sont penses intelligemment."
 
-CARD 2 : Henry Lieater
+CARD 2 : Luis-Henry Lietaer
 - Meme traitement visuel
-- Nom : "Henry Lieater"
+- Nom : "Luis-Henry Lietaer"
 - Role : "CO-FONDATEUR · DIRECTION OPERATIONS & RELATION PROPRIETAIRES"
 - Description :
 
-"Henry dirige la partie operationnelle et la relation proprietaires. Il orchestre quotidiennement les interventions terrain, l'accueil des voyageurs, la coordination des partenaires (menage, maintenance, artisans) et la qualite de l'experience livree dans chaque bien. Comme Guillaume, il a grandi au contact du secteur immobilier de la Cote d'Azur. Il porte l'exigence hoteliere dans le quotidien operationnel de la maison, avec une conviction simple : ce sont les details qu'on soigne qui distinguent une bonne gestion d'une excellente gestion."
+"Luis-Henry dirige la partie operationnelle et la relation proprietaires. Il orchestre quotidiennement les interventions terrain, l'accueil des voyageurs, la coordination des partenaires (menage, maintenance, artisans) et la qualite de l'experience livree dans chaque bien. Comme Guillaume, il a grandi au contact du secteur immobilier de la Cote d'Azur. Il porte l'exigence hoteliere dans le quotidien operationnel de la maison, avec une conviction simple : ce sont les details qu'on soigne qui distinguent une bonne gestion d'une excellente gestion."
 
 **5. SECTION "Nos valeurs"**
 
@@ -254,7 +254,7 @@ Tous les elements interactifs : focus ring gold, ring-offset 2px, ring-offset-co
 5. Puis Partie D (finition micro)
 6. A chaque grosse etape, npm run build pour verifier
 7. A la fin : npm run build + npm run lint 100% clean
-8. Commit : "polish: global pass + /a-propos founders rewrite (Haas & Lieater)"
+8. Commit : "polish: global pass + /a-propos founders rewrite (Haas & Lietaer)"
 9. Recap final par partie, en notant ce qui t'a semble le plus impactant visuellement et tout point qui merite mon attention
 
 Ne touche PAS a /diagnostic (ComingSoon jusqu'a Session 4).

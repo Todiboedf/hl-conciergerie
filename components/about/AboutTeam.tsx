@@ -19,17 +19,17 @@ const FOUNDERS: Founder[] = [
       "Guillaume dirige la partie technologique et marketing de H&L. Il est responsable des outils propriétaires de la maison (channel management, pricing dynamique, reporting en temps réel, diagnostic de rentabilité), de la stratégie de positionnement et du développement commercial. Issu d'une famille profondément ancrée dans l'immobilier azuréen, il a nourri très tôt une conviction : les meilleurs outils ne remplacent jamais l'attention humaine, mais ils en décuplent la valeur quand ils sont pensés intelligemment.",
   },
   {
-    name: "Henry Lieater",
+    name: "Luis-Henry Lietaer",
     role: "Co-fondateur · Direction opérations & relation propriétaires",
     description:
-      "Henry dirige la partie opérationnelle et la relation propriétaires. Il orchestre quotidiennement les interventions terrain, l'accueil des voyageurs, la coordination des partenaires (ménage, maintenance, artisans) et la qualité de l'expérience livrée dans chaque bien. Comme Guillaume, il a grandi au contact du secteur immobilier de la Côte d'Azur. Il porte l'exigence hôtelière dans le quotidien opérationnel de la maison, avec une conviction simple : ce sont les détails qu'on soigne qui distinguent une bonne gestion d'une excellente gestion.",
+      "Luis-Henry dirige la partie opérationnelle et la relation propriétaires. Il orchestre quotidiennement les interventions terrain, l'accueil des voyageurs, la coordination des partenaires (ménage, maintenance, artisans) et la qualité de l'expérience livrée dans chaque bien. Comme Guillaume, il a grandi au contact du secteur immobilier de la Côte d'Azur. Il porte l'exigence hôtelière dans le quotidien opérationnel de la maison, avec une conviction simple : ce sont les détails qu'on soigne qui distinguent une bonne gestion d'une excellente gestion.",
   },
 ];
 
 /**
  * Section "Les deux fondateurs". Fond noir. 2 cards fondateurs avec
  * monogramme H&L circulaire or (120px), nom, rôle, biographie.
- * Injecte les vrais fondateurs : Guillaume Haas et Henry Lieater.
+ * Injecte les vrais fondateurs : Guillaume Haas et Luis-Henry Lietaer.
  */
 export function AboutTeam() {
   return (
