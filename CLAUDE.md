@@ -249,8 +249,26 @@ RESEND_TO_EMAIL=contact@hlconciergerie.fr
 
 ## Ce qui n'est PAS dans le V1 (ne pas implémenter)
 - Espace propriétaire authentifié → V2
-- Système de réservation voyageur → jamais (on utilise Airbnb/Booking)
 - Blog / SEO content → V2
 - Multilingue (anglais, italien, allemand) → V2
 - Intégration channel manager → V3 (sera dans le projet H&L Tools séparé)
-- Système de paiement → jamais (on est conciergerie, pas plateforme)
+
+## Roadmap V2 — Réservation directe
+Décision fondateur (2026-04-16) : H&L ouvrira un canal de réservation directe sur le site, en parallèle des OTA (Airbnb, Booking, Vrbo). Chantier majeur V2, branche dédiée.
+
+**Périmètre V2 :**
+- Fiches biens complètes (galerie, descriptif, équipements, tarifs dynamiques)
+- Calendrier temps réel synchronisé avec le channel manager
+- Paiement en ligne via Stripe (acompte + solde, caution, taxe de séjour)
+- Contrat voyageur généré et signé automatiquement à la réservation
+- Dashboard réservation côté voyageur (récapitulatif, check-in, instructions)
+
+**Prérequis avant démarrage :**
+- Choix du channel manager : Smoobu vs Hospitable (arbitrage à trancher)
+- Contrat Stripe ouvert et validé (KYC HL GROUP SAS)
+- CGV voyageur rédigées et validées juridiquement
+- Template fiche bien défini (structure, photos, copy, SEO)
+
+**Priorité :** après livraison V1 du site, avant Q4 2026.
+
+**Impact immédiat sur le V1 :** les pages `/voyageurs` et fiches biens restent des placeholders on-brand. Aucune promesse de réservation directe ou de paiement en ligne dans le copy actuel — on annonce seulement la venue prochaine.
