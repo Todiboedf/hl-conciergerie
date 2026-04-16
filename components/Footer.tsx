@@ -145,7 +145,7 @@ export function Footer() {
             © {year} <span className="text-bone">HL GROUP SAS</span>. Tous droits réservés.
             <br className="md:hidden" />
             <span className="hidden md:inline"> · </span>
-            Société par actions simplifiée immatriculée à Nice.
+            {"En cours d'immatriculation à Nice."}
           </p>
           <p className="text-[10px] uppercase tracking-[0.22em] text-pearl/60">
             Élégance discrète · Excellence opérationnelle
