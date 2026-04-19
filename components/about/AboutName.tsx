@@ -47,7 +47,7 @@ export function AboutName() {
           <div className="mt-12 space-y-6 text-[15.5px] md:text-[16.5px] leading-[1.85] text-pearl font-light text-left md:text-center mx-auto">
             <motion.p variants={fadeUp} style={{ textWrap: "pretty" }}>
               H&amp;L porte les initiales de ses deux co-fondateurs, Haas et
-              Lieater. Deux amis, deux familles de l&apos;immobilier azuréen,
+              Lieater. Deux amis, deux familles de l&apos;immobilier,
               deux sensibilités complémentaires&nbsp;: l&apos;une tournée vers
               la technologie et la stratégie de marque, l&apos;autre vers
               l&apos;excellence opérationnelle et la relation humaine.

@@ -16,7 +16,7 @@ const FOUNDERS: Founder[] = [
     name: "Guillaume Haas",
     role: "Co-fondateur · Direction tech & marketing",
     description:
-      "Guillaume dirige la partie technologique et marketing de H&L. Il est responsable des outils propriétaires de la maison (channel management, pricing dynamique, reporting en temps réel, diagnostic de rentabilité), de la stratégie de positionnement et du développement commercial. Issu d'une famille profondément ancrée dans l'immobilier azuréen, il a nourri très tôt une conviction : les meilleurs outils ne remplacent jamais l'attention humaine, mais ils en décuplent la valeur quand ils sont pensés intelligemment.",
+      "Guillaume dirige la partie technologique et marketing de H&L. Il est responsable des outils propriétaires de la maison (channel management, pricing dynamique, reporting en temps réel, diagnostic de rentabilité), de la stratégie de positionnement et du développement commercial. Issu d'une famille profondément ancrée dans l'immobilier, il a nourri très tôt une conviction : les meilleurs outils ne remplacent jamais l'attention humaine, mais ils en décuplent la valeur quand ils sont pensés intelligemment.",
   },
   {
     name: "Henry Lieater",

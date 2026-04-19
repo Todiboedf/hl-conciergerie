@@ -56,7 +56,7 @@ export function AboutStory() {
                 conviction partagée de ses deux co-fondateurs, Guillaume Haas
                 et Henry Lieater. Le H et le L du nom portent leurs initiales,
                 et se lisent également comme Harmonie &amp; Luxe. Tous deux
-                ont grandi au contact de l&apos;immobilier azuréen&nbsp;:
+                ont grandi au contact de l&apos;immobilier&nbsp;:
                 leurs familles respectives évoluent depuis plusieurs décennies
                 dans le secteur de la gestion, de la transaction et de
                 l&apos;investissement sur la Côte d&apos;Azur. De cette
