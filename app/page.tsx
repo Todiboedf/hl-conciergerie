@@ -6,6 +6,7 @@ import { PacksPreview } from "@/components/landing/PacksPreview";
 import { DiagnosticTeaser } from "@/components/landing/DiagnosticTeaser";
 import { WhyHL } from "@/components/landing/WhyHL";
 import { Testimonials } from "@/components/landing/Testimonials";
+import { Partners } from "@/components/landing/Partners";
 import { FAQ } from "@/components/landing/FAQ";
 import { CTAFinal } from "@/components/landing/CTAFinal";
 
@@ -20,6 +21,7 @@ export default function HomePage() {
       <DiagnosticTeaser />
       <WhyHL />
       <Testimonials />
+      <Partners />
       <FAQ />
       <CTAFinal />
     </>
