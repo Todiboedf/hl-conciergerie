@@ -15,11 +15,11 @@ export default function MentionsLegalesPage() {
       eyebrow="Informations légales"
       title="Mentions légales"
       lastUpdate="avril 2026"
-      intro="Les présentes mentions légales sont conformes aux articles 6-III et 19 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, dite LCEN. Elles s'appliquent à l'ensemble des visiteurs du site hlconciergerie.fr."
+      intro="Les présentes mentions légales sont conformes aux articles 6-III et 19 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, dite LCEN. Elles s'appliquent à l'ensemble des visiteurs du site hl-conciergerie.com."
     >
       <LegalSection number="1." title="Éditeur du site">
         <p>
-          Le site <strong>hlconciergerie.fr</strong> est édité par la société{" "}
+          Le site <strong>hl-conciergerie.com</strong> est édité par la société{" "}
           <strong>HL GROUP SAS</strong>, société par actions simplifiée au
           capital de 10 000 €, dont le siège social est situé à Nice
           (Alpes-Maritimes, France).
@@ -43,10 +43,10 @@ export default function MentionsLegalesPage() {
           co-fondateur et représentant légal de HL GROUP SAS. Toute demande
           relative au contenu du site peut être adressée à :{" "}
           <a
-            href="mailto:contact@hlconciergerie.fr"
+            href="mailto:contact@hl-conciergerie.com"
             className="text-gold-dark underline underline-offset-4"
           >
-            contact@hlconciergerie.fr
+            contact@hl-conciergerie.com
           </a>
           .
         </p>
@@ -75,7 +75,7 @@ export default function MentionsLegalesPage() {
 
       <LegalSection number="4." title="Propriété intellectuelle">
         <p>
-          L&apos;ensemble des éléments composant le site hlconciergerie.fr
+          L&apos;ensemble des éléments composant le site hl-conciergerie.com
           (textes, images, graphismes, logo, monogramme H&amp;L, icônes,
           typographies, architecture, mise en page, code source) est la
           propriété exclusive de HL GROUP SAS ou de ses partenaires ayant
@@ -108,7 +108,7 @@ export default function MentionsLegalesPage() {
         </p>
         <p>
           La création d&apos;un lien hypertexte pointant vers le site
-          hlconciergerie.fr est soumise à l&apos;accord préalable et écrit
+          hl-conciergerie.com est soumise à l&apos;accord préalable et écrit
           de HL GROUP SAS.
         </p>
       </LegalSection>
@@ -125,7 +125,7 @@ export default function MentionsLegalesPage() {
           >
             politique de confidentialité
           </a>{" "}
-          ou nous écrire à contact@hlconciergerie.fr.
+          ou nous écrire à contact@hl-conciergerie.com.
         </p>
       </LegalSection>
 

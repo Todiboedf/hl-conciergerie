@@ -56,6 +56,7 @@ const payloadSchema = z.object({
       "magnan",
       "saint-roch",
       "autre-nice",
+      "saint-laurent-var",
       "villefranche",
       "beaulieu",
       "cap-ail",
@@ -122,7 +123,7 @@ function renderHtml(
               <td style="padding:36px 40px 24px 40px;border-bottom:1px solid rgba(138,112,48,0.2);">
                 <p style="margin:0;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#8A7030;">H&amp;L Conciergerie · Votre estimation</p>
                 <h1 style="margin:14px 0 0 0;font-family:Georgia,serif;font-weight:400;font-size:30px;color:#0A0A0A;">Bonjour ${escapeHtml(input.firstName)},</h1>
-                <p style="margin:12px 0 0 0;font-size:14px;line-height:1.7;color:#555;">Voici le récapitulatif de l&rsquo;estimation de rentabilité locative que vous venez d&rsquo;obtenir sur hlconciergerie.fr. Estimation indicative basée sur les données Airbtics 2025 et les caractéristiques déclarées de votre bien.</p>
+                <p style="margin:12px 0 0 0;font-size:14px;line-height:1.7;color:#555;">Voici le récapitulatif de l&rsquo;estimation de rentabilité locative que vous venez d&rsquo;obtenir sur hl-conciergerie.com. Estimation indicative basée sur les données Airbtics 2025 et les caractéristiques déclarées de votre bien.</p>
               </td>
             </tr>
             <tr>
@@ -192,7 +193,7 @@ function renderHtml(
             <tr>
               <td style="padding:24px 40px 32px 40px;">
                 <p style="margin:0 0 16px 0;font-size:14px;line-height:1.7;color:#2A2A2A;">Souhaitez-vous en discuter avec l&rsquo;un de nos associés&nbsp;? Nous programmons volontiers un rendez-vous pour analyser votre bien en détail et affiner cette estimation.</p>
-                <a href="https://hl-conciergerie.vercel.app/contact" style="display:inline-block;background-color:#C9A84C;color:#0A0A0A;padding:14px 26px;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;font-weight:500;">Prendre rendez-vous</a>
+                <a href="https://hl-conciergerie.com/contact" style="display:inline-block;background-color:#C9A84C;color:#0A0A0A;padding:14px 26px;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;font-weight:500;">Prendre rendez-vous</a>
               </td>
             </tr>
             <tr>
@@ -232,7 +233,7 @@ function renderText(
     "",
     "Bien analysé : " + PROPERTY_TYPE_LABELS[input.propertyType] + " à " + NICE_AREA_LABELS[input.area],
     "",
-    "Souhaitez-vous en discuter ? Répondez à ce mail ou prenez rendez-vous via hl-conciergerie.vercel.app/contact.",
+    "Souhaitez-vous en discuter ? Répondez à ce mail ou prenez rendez-vous via hl-conciergerie.com/contact.",
     "",
     "H&L Conciergerie · HL GROUP SAS · Nice",
   ].join("\n");
@@ -261,8 +262,8 @@ export async function POST(request: Request) {
 
   const apiKey = process.env.RESEND_API_KEY;
   const fromEmail =
-    process.env.RESEND_FROM_EMAIL ?? "contact@hlconciergerie.fr";
-  const teamEmail = process.env.RESEND_TO_EMAIL ?? "contact@hlconciergerie.fr";
+    process.env.RESEND_FROM_EMAIL ?? "contact@hl-conciergerie.com";
+  const teamEmail = process.env.RESEND_TO_EMAIL ?? "contact@hl-conciergerie.com";
 
   if (!apiKey) {
     if (process.env.NODE_ENV !== "production") {
@@ -295,7 +296,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           error:
-            "Impossible d'envoyer l'estimation par email. Merci de nous écrire directement à contact@hlconciergerie.fr.",
+            "Impossible d'envoyer l'estimation par email. Merci de nous écrire directement à contact@hl-conciergerie.com.",
         },
         { status: 500 },
       );
@@ -309,7 +310,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          "Impossible d'envoyer l'estimation par email. Merci de nous écrire directement à contact@hlconciergerie.fr.",
+          "Impossible d'envoyer l'estimation par email. Merci de nous écrire directement à contact@hl-conciergerie.com.",
       },
       { status: 500 },
     );

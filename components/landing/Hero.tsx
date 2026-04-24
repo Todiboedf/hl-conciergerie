@@ -25,8 +25,8 @@ export function Hero() {
       className="relative isolate overflow-hidden flex items-start radial-dark grain-overlay"
       style={{
         minHeight: "100dvh",
-        paddingTop: "calc(var(--header-height) + 2.5rem)",
-        paddingBottom: "5rem",
+        paddingTop: "calc(var(--header-height) + 1.5rem)",
+        paddingBottom: "3.5rem",
       }}
     >
       {/* Glow orbs ambiance */}
@@ -44,7 +44,7 @@ export function Hero() {
         }}
       />
 
-      <div className="container-hl relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
+      <div className="container-hl relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-8 items-center w-full">
         {/* COLONNE GAUCHE : texte 60% */}
         <div className="lg:col-span-7 max-w-2xl">
           <motion.div
@@ -184,11 +184,11 @@ export function Hero() {
               <CornerOrnament className="absolute -bottom-px -right-px rotate-180" />
               <CornerOrnament className="absolute -bottom-px -left-px -rotate-90" />
 
-              <div className="flex flex-col items-center gap-8 px-8 py-10">
+              <div className="flex flex-col items-center gap-6 sm:gap-8 px-5 sm:px-8 py-8 sm:py-10 w-full">
                 <HLLogo variant="gold" size={300} priority />
-                <div className="flex flex-col items-center gap-2">
+                <div className="flex flex-col items-center gap-2 w-full">
                   <GoldDivider width="sm" />
-                  <span className="text-[10px] uppercase tracking-[0.32em] text-pearl">
+                  <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.22em] sm:tracking-[0.32em] text-pearl text-center">
                     Maison fondée en 2026
                   </span>
                 </div>
@@ -215,15 +215,15 @@ export function Hero() {
                 duration: 1,
                 ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
               }}
-              className="mt-6 ml-auto w-full max-w-[280px] border border-gold/25 bg-white/[0.035] backdrop-blur-md px-6 py-5"
+              className="mt-6 ml-auto w-full max-w-[280px] border border-gold/25 bg-white/[0.035] backdrop-blur-md px-5 sm:px-6 py-5"
             >
               <div
-                className="font-display font-light text-gold-dark leading-none tracking-[-0.015em]"
-                style={{ fontSize: "clamp(40px, 4.2vw, 48px)" }}
+                className="font-display font-light text-gold-dark leading-none tracking-[-0.015em] break-words"
+                style={{ fontSize: "clamp(32px, 8.5vw, 48px)" }}
               >
                 37&#8239;000&nbsp;€
               </div>
-              <p className="mt-3 text-[11.5px] uppercase tracking-[0.18em] text-pearl leading-[1.5]">
+              <p className="mt-3 text-[11px] sm:text-[11.5px] uppercase tracking-[0.16em] sm:tracking-[0.18em] text-pearl leading-[1.5]">
                 Revenu médian annuel d&apos;un bien géré à Nice
               </p>
               <p className="mt-2 italic text-[10px] text-pearl/60 leading-none">

@@ -126,7 +126,7 @@ export default function OpenGraphImage() {
           }}
         >
           <div style={{ display: "flex", color: "#C9A84C" }}>
-            hlconciergerie.fr
+            hl-conciergerie.com
           </div>
           <div style={{ display: "flex", color: "#A8A8A8" }}>
             Nice · Côte d&apos;Azur

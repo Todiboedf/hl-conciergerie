@@ -3,27 +3,6 @@ import { Mail, MapPin } from "lucide-react";
 import { HLLogo } from "@/components/ui/HLLogo";
 import { GoldDivider } from "@/components/ui/GoldDivider";
 
-// Lucide v1 a retiré les icônes de marques : SVG inline minimalistes on-brand.
-function InstagramGlyph({ size = 15 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" />
-    </svg>
-  );
-}
-
-function LinkedinGlyph({ size = 15 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z" />
-      <rect x="2" y="9" width="4" height="12" />
-      <circle cx="4" cy="4" r="2" />
-    </svg>
-  );
-}
-
 const navColumns = [
   {
     title: "Services",
@@ -80,11 +59,11 @@ export function Footer() {
             </h3>
             <div className="space-y-3 text-[14px] text-pearl">
               <a
-                href="mailto:contact@hlconciergerie.fr"
+                href="mailto:contact@hl-conciergerie.com"
                 className="flex items-start gap-3 hover:text-gold transition-colors duration-200 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               >
                 <Mail size={15} strokeWidth={1.5} className="mt-0.5 text-gold/70 group-hover:text-gold" />
-                <span>contact@hlconciergerie.fr</span>
+                <span>contact@hl-conciergerie.com</span>
               </a>
               <div className="flex items-start gap-3">
                 <MapPin size={15} strokeWidth={1.5} className="mt-0.5 text-gold/70" />
@@ -95,26 +74,9 @@ export function Footer() {
                 </span>
               </div>
             </div>
-            <div className="flex items-center gap-3 pt-2">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 border border-gold/25 text-pearl hover:border-gold hover:text-gold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-                aria-label="Instagram H&L Conciergerie"
-              >
-                <InstagramGlyph />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 border border-gold/25 text-pearl hover:border-gold hover:text-gold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-                aria-label="LinkedIn H&L Conciergerie"
-              >
-                <LinkedinGlyph />
-              </a>
-            </div>
+            <p className="pt-2 text-[11px] uppercase tracking-[0.22em] text-pearl/60">
+              Réseaux sociaux · bientôt
+            </p>
           </div>
 
           {/* Colonnes nav */}

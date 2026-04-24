@@ -68,29 +68,29 @@ export function MarketStats() {
         {/* Grille 4 chiffres */}
         <motion.div
           variants={staggerContainer}
-          className="mt-16 md:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6"
+          className="mt-16 md:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 md:gap-6"
         >
           {MARKET_STATS.map((stat) => (
             <motion.article
               key={stat.label}
               variants={fadeUp}
-              className="group relative overflow-hidden border border-gold-border/60 bg-white/40 backdrop-blur-md p-8 md:p-10 transition-[transform,border-color,background-color] duration-300 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-gold-dark/70 hover:bg-white/60 will-change-transform"
+              className="group relative overflow-hidden border border-gold-border/60 bg-white/40 backdrop-blur-md p-5 sm:p-7 md:p-10 transition-[transform,border-color,background-color] duration-300 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-gold-dark/70 hover:bg-white/60 will-change-transform"
             >
               <div
-                className="font-display font-light text-gold-dark leading-none tracking-[-0.02em]"
-                style={{ fontSize: "clamp(48px, 5.5vw, 80px)" }}
+                className="font-display font-light text-gold-dark leading-none tracking-[-0.02em] break-words"
+                style={{ fontSize: "clamp(28px, 7.5vw, 80px)" }}
               >
                 {stat.value}
               </div>
 
-              <div className="mt-5 h-px w-10 bg-gold-dark/40 transition-all duration-500 group-hover:w-16" />
+              <div className="mt-4 sm:mt-5 h-px w-10 bg-gold-dark/40 transition-all duration-500 group-hover:w-16" />
 
-              <p className="mt-5 text-[13px] md:text-[14px] leading-[1.55] text-black/70 font-light">
+              <p className="mt-4 sm:mt-5 text-[12px] sm:text-[13px] md:text-[14px] leading-[1.55] text-black/70 font-light">
                 {stat.label}
               </p>
 
               {stat.source && (
-                <p className="mt-4 text-[10px] uppercase tracking-[0.2em] text-black/40">
+                <p className="mt-3 sm:mt-4 text-[10px] uppercase tracking-[0.18em] text-black/40">
                   {stat.source}
                 </p>
               )}

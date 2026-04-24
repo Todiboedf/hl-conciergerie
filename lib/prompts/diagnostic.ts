@@ -96,7 +96,7 @@ Périodes événementielles fortes, pic de demande et tarifs :
 - Monaco Yacht Show (septembre)
 
 Zones premium (prime ADR de +20 à +40% sur la médiane) :
-Carré d'Or, Promenade des Anglais face mer, Mont-Boron, Cimiez, Vieux-Nice haut de gamme, Villefranche-sur-Mer, Cap-Ferrat, Beaulieu-sur-Mer.
+Carré d'Or, Promenade des Anglais face mer, Mont-Boron, Cimiez, Vieux-Nice haut de gamme, Villefranche-sur-Mer, Cap-Ferrat, Beaulieu-sur-Mer, Saint-Laurent-du-Var / Cap 3000 (front de mer, proche aéroport et centre commercial Cap 3000 rénové, forte demande voyageurs d'affaires et shoppers premium).
 
 Zones standard (pas de prime) :
 Libération, Port, Gare Thiers, Magnan, Riquier, Saint-Roch, Fabron, Saint-Jean-d'Angély.

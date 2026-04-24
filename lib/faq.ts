@@ -8,7 +8,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Quels biens acceptez-vous en gestion ?",
     answer:
-      "Nous accompagnons principalement des appartements, maisons et villas situés à Nice et dans un rayon proche de la Côte d'Azur : Villefranche, Beaulieu, Cap-Ferrat, Antibes, Cannes. Chaque bien est évalué lors d'une visite préalable, menée personnellement par l'un des fondateurs, pour garantir que notre niveau de service est adapté à son positionnement. Nous sélectionnons nos adresses avec soin afin de préserver la qualité de notre maison.",
+      "Nous accompagnons principalement des appartements, maisons et villas situés à Nice et dans un rayon proche de la Côte d'Azur : Saint-Laurent-du-Var / Cap 3000, Villefranche, Beaulieu, Cap-Ferrat, Antibes, Cannes. Chaque bien est évalué lors d'une visite préalable, menée personnellement par l'un des fondateurs, pour garantir que notre niveau de service est adapté à son positionnement. Nous sélectionnons nos adresses avec soin afin de préserver la qualité de notre maison.",
   },
   {
     question: "Quelle est votre commission et que comprend-elle exactement ?",

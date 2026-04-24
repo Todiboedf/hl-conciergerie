@@ -7,7 +7,7 @@ import type { MetadataRoute } from "next";
  */
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://hl-conciergerie.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://hl-conciergerie.com";
 
 interface RouteConfig {
   path: string;

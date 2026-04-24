@@ -137,7 +137,7 @@ export function ContactForm() {
     } catch {
       setStatus("error");
       toast.error(
-        "Impossible d'envoyer votre message. Merci de réessayer ou de nous écrire directement à contact@hlconciergerie.fr.",
+        "Impossible d'envoyer votre message. Merci de réessayer ou de nous écrire directement à contact@hl-conciergerie.com.",
       );
     }
   }
@@ -275,7 +275,7 @@ export function ContactForm() {
             }
             disabled={isLoading}
             className="h-12 bg-white/50 border-gold-dark/30 text-black placeholder:text-black/35 focus-visible:border-gold-dark focus-visible:ring-gold-dark/30 rounded-none text-[15px]"
-            placeholder="Carré d'Or Nice, Villefranche-sur-Mer, Cap-Ferrat..."
+            placeholder="Carré d'Or Nice, Saint-Laurent-du-Var / Cap 3000, Villefranche-sur-Mer..."
           />
         </Field>
 

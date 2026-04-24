@@ -68,10 +68,10 @@ export function ContactSection() {
                     Email
                   </p>
                   <a
-                    href="mailto:contact@hlconciergerie.fr"
+                    href="mailto:contact@hl-conciergerie.com"
                     className="mt-1 block text-[15px] text-black hover:text-gold-dark transition-colors"
                   >
-                    contact@hlconciergerie.fr
+                    contact@hl-conciergerie.com
                   </a>
                 </div>
               </motion.li>

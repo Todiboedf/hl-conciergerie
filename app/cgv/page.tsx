@@ -356,7 +356,7 @@ export default function CGVPage() {
           éventuels tiers concernés, conformément au Règlement général
           sur la protection des données (RGPD). Les modalités détaillées
           de ce traitement figurent dans la politique de confidentialité
-          accessible sur le site hlconciergerie.fr.
+          accessible sur le site hl-conciergerie.com.
         </p>
       </LegalSection>
 

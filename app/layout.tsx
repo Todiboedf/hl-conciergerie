@@ -21,10 +21,10 @@ const inter = Inter({
 });
 
 // Fallback Vercel preview pour le premier déploiement (sans domaine custom).
-// Une fois le domaine hlconciergerie.fr branché, définir NEXT_PUBLIC_SITE_URL
+// Une fois le domaine hl-conciergerie.com branché, définir NEXT_PUBLIC_SITE_URL
 // sur Vercel pour basculer les meta Open Graph sur le domaine final.
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://hl-conciergerie.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://hl-conciergerie.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -58,6 +58,33 @@ export const metadata: Metadata = {
   },
 };
 
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "H&L Conciergerie",
+  legalName: "HL GROUP SAS",
+  url: siteUrl,
+  logo: `${siteUrl}/brand/hl-logo-gold.png`,
+  image: `${siteUrl}/opengraph-image`,
+  description:
+    "Conciergerie haut de gamme spécialisée dans la gestion locative courte durée à Nice et sur la Côte d'Azur.",
+  email: "contact@hl-conciergerie.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Nice",
+    addressRegion: "Provence-Alpes-Côte d'Azur",
+    postalCode: "06000",
+    addressCountry: "FR",
+  },
+  areaServed: [
+    { "@type": "City", name: "Nice" },
+    { "@type": "City", name: "Saint-Laurent-du-Var" },
+    { "@type": "Place", name: "Côte d'Azur" },
+  ],
+  serviceType: "Gestion locative courte durée premium",
+  priceRange: "€€€",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -72,6 +99,12 @@ export default function RootLayout({
         <Footer />
         <Toaster position="top-right" richColors closeButton />
         <ClarityAnalytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessJsonLd),
+          }}
+        />
       </body>
     </html>
   );

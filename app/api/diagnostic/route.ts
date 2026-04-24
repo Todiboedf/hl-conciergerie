@@ -57,6 +57,7 @@ const diagnosticSchema = z.object({
     "magnan",
     "saint-roch",
     "autre-nice",
+    "saint-laurent-var",
     "villefranche",
     "beaulieu",
     "cap-ail",
@@ -415,7 +416,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          "Nous rencontrons une difficulté technique. Nos équipes ont été alertées. Vous pouvez nous écrire directement à contact@hlconciergerie.fr.",
+          "Nous rencontrons une difficulté technique. Nos équipes ont été alertées. Vous pouvez nous écrire directement à contact@hl-conciergerie.com.",
       },
       { status: 502 },
     );

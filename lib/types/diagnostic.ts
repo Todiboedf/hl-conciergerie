@@ -39,6 +39,7 @@ export type NiceArea =
   | "magnan"
   | "saint-roch"
   | "autre-nice"
+  | "saint-laurent-var"
   | "villefranche"
   | "beaulieu"
   | "cap-ail";
@@ -182,6 +183,7 @@ export const NICE_AREA_LABELS: Record<NiceArea, string> = {
   magnan: "Magnan",
   "saint-roch": "Saint-Roch",
   "autre-nice": "Autre quartier de Nice",
+  "saint-laurent-var": "Saint-Laurent-du-Var / Cap 3000",
   villefranche: "Villefranche-sur-Mer",
   beaulieu: "Beaulieu-sur-Mer",
   "cap-ail": "Cap-d'Ail",
@@ -235,6 +237,7 @@ export const PREMIUM_AREAS: ReadonlySet<NiceArea> = new Set([
   "promenade",
   "mont-boron",
   "cimiez",
+  "saint-laurent-var",
   "villefranche",
   "beaulieu",
   "cap-ail",

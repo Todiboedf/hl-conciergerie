@@ -161,6 +161,7 @@ const step2Schema = z.object({
     "magnan",
     "saint-roch",
     "autre-nice",
+    "saint-laurent-var",
     "villefranche",
     "beaulieu",
     "cap-ail",
@@ -358,7 +359,7 @@ export function DiagnosticForm({ onSuccess }: DiagnosticFormProps) {
     } catch {
       setSubmitting(false);
       toast.error(
-        "Nous rencontrons une difficulté technique. Merci de réessayer ou de nous écrire à contact@hlconciergerie.fr.",
+        "Nous rencontrons une difficulté technique. Merci de réessayer ou de nous écrire à contact@hl-conciergerie.com.",
       );
     }
   }, [state, validateCurrentStep, onSuccess]);
@@ -408,7 +409,7 @@ export function DiagnosticForm({ onSuccess }: DiagnosticFormProps) {
     <div className="w-full">
       <DiagnosticProgress currentStep={step} className="mb-10 md:mb-12" />
 
-      <GlassCard variant="cream" className="p-6 md:p-10 lg:p-12">
+      <GlassCard variant="cream" className="p-5 sm:p-8 md:p-10 lg:p-12">
         {/* Eyebrow + titre de l'étape */}
         <div className="flex items-center gap-3 mb-6 md:mb-8">
           <span className="flex h-9 w-9 items-center justify-center border border-gold-dark/40 bg-white/60">

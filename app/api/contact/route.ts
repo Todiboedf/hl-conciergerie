@@ -191,8 +191,8 @@ export async function POST(request: Request) {
 
   const apiKey = process.env.RESEND_API_KEY;
   const fromEmail =
-    process.env.RESEND_FROM_EMAIL ?? "contact@hlconciergerie.fr";
-  const toEmail = process.env.RESEND_TO_EMAIL ?? "contact@hlconciergerie.fr";
+    process.env.RESEND_FROM_EMAIL ?? "contact@hl-conciergerie.com";
+  const toEmail = process.env.RESEND_TO_EMAIL ?? "contact@hl-conciergerie.com";
 
   // Dev fallback : si la clé Resend n'est pas configurée, on simule
   // un succès côté serveur pour permettre les tests UI localement.
@@ -228,7 +228,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           error:
-            "Une erreur est survenue lors de l'envoi du message. Merci de réessayer ou de nous écrire directement à contact@hlconciergerie.fr.",
+            "Une erreur est survenue lors de l'envoi du message. Merci de réessayer ou de nous écrire directement à contact@hl-conciergerie.com.",
         },
         { status: 500 },
       );
@@ -242,7 +242,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          "Une erreur est survenue lors de l'envoi du message. Merci de réessayer ou de nous écrire directement à contact@hlconciergerie.fr.",
+          "Une erreur est survenue lors de l'envoi du message. Merci de réessayer ou de nous écrire directement à contact@hl-conciergerie.com.",
       },
       { status: 500 },
     );

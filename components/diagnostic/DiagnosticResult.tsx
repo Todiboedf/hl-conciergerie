@@ -114,7 +114,7 @@ export const DiagnosticResult = forwardRef<HTMLDivElement, DiagnosticResultProps
       >
         {/* ===== Bloc principal : estimation centrale ===== */}
         <motion.div variants={fadeUp}>
-          <GlassCard variant="cream" className="p-8 md:p-12 lg:p-16 text-center">
+          <GlassCard variant="cream" className="p-6 sm:p-8 md:p-12 lg:p-16 text-center">
             <span className="eyebrow-cream block">
               Votre estimation personnalisée
             </span>
@@ -135,8 +135,8 @@ export const DiagnosticResult = forwardRef<HTMLDivElement, DiagnosticResultProps
                 duration: 1,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="font-display font-light text-gold-dark mt-4 leading-[0.95] tracking-[-0.02em]"
-              style={{ fontSize: "clamp(56px, 11vw, 120px)" }}
+              className="font-display font-light text-gold-dark mt-4 leading-[0.95] tracking-[-0.02em] break-words"
+              style={{ fontSize: "clamp(40px, 11vw, 120px)" }}
             >
               {fmtEur(result.revenuMensuelEstime.central)}
             </motion.p>
@@ -195,7 +195,7 @@ export const DiagnosticResult = forwardRef<HTMLDivElement, DiagnosticResultProps
 
         {/* ===== Justification ===== */}
         <motion.div variants={fadeUp}>
-          <GlassCard variant="cream" className="p-8 md:p-10">
+          <GlassCard variant="cream" className="p-6 sm:p-8 md:p-10">
             <div className="flex items-center gap-3 mb-5">
               <span className="flex h-9 w-9 items-center justify-center border border-gold-dark/40 bg-white/60 shrink-0">
                 <Sparkles
@@ -220,7 +220,7 @@ export const DiagnosticResult = forwardRef<HTMLDivElement, DiagnosticResultProps
           variants={fadeUp}
           className="grid grid-cols-1 lg:grid-cols-2 gap-4"
         >
-          <GlassCard variant="cream" className="p-8 md:p-10">
+          <GlassCard variant="cream" className="p-6 sm:p-8 md:p-10">
             <div className="flex items-center gap-3 mb-6">
               <span className="flex h-9 w-9 items-center justify-center border border-gold-dark/40 bg-white/60 shrink-0">
                 <Check
@@ -246,7 +246,7 @@ export const DiagnosticResult = forwardRef<HTMLDivElement, DiagnosticResultProps
             </ul>
           </GlassCard>
 
-          <GlassCard variant="cream" className="p-8 md:p-10">
+          <GlassCard variant="cream" className="p-6 sm:p-8 md:p-10">
             <div className="flex items-center gap-3 mb-6">
               <span className="flex h-9 w-9 items-center justify-center border border-gold-dark/40 bg-white/60 shrink-0">
                 <TrendingUp

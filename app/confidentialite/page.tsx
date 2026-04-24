@@ -15,7 +15,7 @@ export default function ConfidentialitePage() {
       eyebrow="Protection des données"
       title="Politique de confidentialité"
       lastUpdate="avril 2026"
-      intro="La présente politique de confidentialité décrit la manière dont HL GROUP SAS (ci-après « H&L Conciergerie ») collecte, utilise et protège les données à caractère personnel des visiteurs et des utilisateurs du site hlconciergerie.fr, conformément au Règlement général sur la protection des données (RGPD, Règlement UE 2016/679) et à la loi Informatique et Libertés du 6 janvier 1978 modifiée."
+      intro="La présente politique de confidentialité décrit la manière dont HL GROUP SAS (ci-après « H&L Conciergerie ») collecte, utilise et protège les données à caractère personnel des visiteurs et des utilisateurs du site hl-conciergerie.com, conformément au Règlement général sur la protection des données (RGPD, Règlement UE 2016/679) et à la loi Informatique et Libertés du 6 janvier 1978 modifiée."
     >
       <LegalSection number="1." title="Responsable du traitement">
         <p>
@@ -25,10 +25,10 @@ export default function ConfidentialitePage() {
           <strong>H&amp;L Conciergerie</strong>. Toute demande relative au
           traitement de vos données personnelles peut être adressée à :{" "}
           <a
-            href="mailto:contact@hlconciergerie.fr"
+            href="mailto:contact@hl-conciergerie.com"
             className="text-gold-dark underline underline-offset-4"
           >
-            contact@hlconciergerie.fr
+            contact@hl-conciergerie.com
           </a>
           .
         </p>
@@ -226,10 +226,10 @@ export default function ConfidentialitePage() {
         <p className="mt-4">
           Pour exercer ces droits, contactez-nous à{" "}
           <a
-            href="mailto:contact@hlconciergerie.fr"
+            href="mailto:contact@hl-conciergerie.com"
             className="text-gold-dark underline underline-offset-4"
           >
-            contact@hlconciergerie.fr
+            contact@hl-conciergerie.com
           </a>{" "}
           en précisant votre demande et en joignant, si nécessaire, une
           pièce d&apos;identité. Nous vous répondrons dans un délai maximal
@@ -249,7 +249,7 @@ export default function ConfidentialitePage() {
 
       <LegalSection number="8." title="Cookies et traceurs">
         <p>
-          Le site hlconciergerie.fr utilise des cookies et traceurs dans une
+          Le site hl-conciergerie.com utilise des cookies et traceurs dans une
           double finalité&nbsp;:
         </p>
         <ul className="mt-4 space-y-2 list-disc list-outside pl-6 marker:text-gold-dark">
@@ -294,10 +294,10 @@ export default function ConfidentialitePage() {
           protection de vos données, contactez directement le responsable
           du traitement à :{" "}
           <a
-            href="mailto:contact@hlconciergerie.fr"
+            href="mailto:contact@hl-conciergerie.com"
             className="text-gold-dark underline underline-offset-4"
           >
-            contact@hlconciergerie.fr
+            contact@hl-conciergerie.com
           </a>
           .
         </p>
