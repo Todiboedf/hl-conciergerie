@@ -9,6 +9,7 @@ import {
   type DiagnosticResult,
 } from "@/lib/types/diagnostic";
 import { PACKS } from "@/lib/packs";
+import { getClientIp, isAllowedOrigin, isRateLimited } from "@/lib/rateLimit";
 
 /**
  * Route POST /api/diagnostic/email
@@ -240,6 +241,28 @@ function renderText(
 }
 
 export async function POST(request: Request) {
+  // Anti-CSRF léger : on refuse les requêtes provenant d'une autre origine.
+  if (!isAllowedOrigin(request)) {
+    return NextResponse.json(
+      { error: "Origine non autorisée." },
+      { status: 403 },
+    );
+  }
+
+  // Rate limit : 3 envois par IP toutes les 5 minutes (protection anti-spam).
+  const ip = getClientIp(request);
+  if (
+    isRateLimited(`diag-email:${ip}`, {
+      windowMs: 5 * 60_000,
+      maxHits: 3,
+    })
+  ) {
+    return NextResponse.json(
+      { error: "Trop d'envois récents. Merci de réessayer dans quelques minutes." },
+      { status: 429 },
+    );
+  }
+
   let json: unknown;
   try {
     json = await request.json();

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { Resend } from "resend";
+import { getClientIp, isAllowedOrigin, isRateLimited } from "@/lib/rateLimit";
 
 /**
  * Route POST /api/contact
@@ -160,6 +161,25 @@ function renderPlainTextEmail(data: ContactPayload): string {
 }
 
 export async function POST(request: Request) {
+  if (!isAllowedOrigin(request)) {
+    return NextResponse.json(
+      { error: "Origine non autorisée." },
+      { status: 403 },
+    );
+  }
+
+  // Rate limit : 5 envois par IP toutes les 10 minutes pour le formulaire
+  // de contact (anti-spam léger).
+  const ip = getClientIp(request);
+  if (
+    isRateLimited(`contact:${ip}`, { windowMs: 10 * 60_000, maxHits: 5 })
+  ) {
+    return NextResponse.json(
+      { error: "Trop de demandes récentes. Merci de réessayer dans quelques minutes." },
+      { status: 429 },
+    );
+  }
+
   let json: unknown;
   try {
     json = await request.json();

@@ -85,6 +85,42 @@ const localBusinessJsonLd = {
   priceRange: "€€€",
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "H&L Conciergerie",
+  legalName: "HL GROUP SAS",
+  url: siteUrl,
+  logo: `${siteUrl}/brand/hl-logo-gold.png`,
+  email: "contact@hl-conciergerie.com",
+  founder: [
+    { "@type": "Person", name: "Guillaume Haas" },
+    { "@type": "Person", name: "Luis-Henry" },
+  ],
+  sameAs: [],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Nice",
+    addressRegion: "Provence-Alpes-Côte d'Azur",
+    postalCode: "06000",
+    addressCountry: "FR",
+  },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "H&L Conciergerie",
+  url: siteUrl,
+  inLanguage: "fr-FR",
+  publisher: { "@type": "Organization", name: "HL GROUP SAS" },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${siteUrl}/diagnostic`,
+    query: "required name=service",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -93,6 +129,18 @@ export default function RootLayout({
       lang="fr"
       className={`${cormorant.variable} ${inter.variable} h-full antialiased`}
     >
+      <head>
+        {/* Resource hints fonts Google : preconnect réduit la latence du
+            premier render des titres Cormorant Garamond / Inter. */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        {/* DNS prefetch des analytics — réduit le coût du premier ping */}
+        <link rel="dns-prefetch" href="https://www.clarity.ms" />
+      </head>
       <body className="min-h-full flex flex-col bg-black text-bone">
         <Header />
         <main className="flex-1">{children}</main>
@@ -103,6 +151,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(localBusinessJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
           }}
         />
       </body>
