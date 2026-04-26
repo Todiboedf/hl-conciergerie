@@ -4,7 +4,7 @@ import { VoyageursPage } from "@/components/voyageurs/VoyageursPage";
 export const metadata: Metadata = {
   title: "Voyageurs · Séjours d'exception à Nice & Côte d'Azur",
   description:
-    "Découvrez une sélection confidentielle d'adresses d'exception à Nice et sur la Riviera, accompagnées d'une conciergerie dédiée pour orchestrer chaque détail de votre séjour.",
+    "La réservation directe de nos adresses sur la Côte d'Azur arrive prochainement. En attendant, nos biens restent accessibles via Airbnb, Booking et Vrbo.",
   alternates: { canonical: "/voyageurs" },
   openGraph: {
     title: "Voyageurs · H&L Conciergerie",
@@ -15,6 +15,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Page() {
-  return <VoyageursPage />;
+export default function VoyageursPage() {
+  return (
+    <ComingSoon
+      eyebrow="Voyageurs"
+      title="Nos adresses, bientôt en réservation directe."
+      italicWord="bientôt"
+      description="Nos biens se réservent aujourd'hui via Airbnb, Booking et Vrbo. Prochainement, nous proposerons la réservation directe sur ce site : fiches biens, calendrier temps réel et paiement sécurisé. D'ici là, écrivez-nous pour toute demande particulière."
+      primaryCtaHref="/contact"
+      primaryCtaLabel="Nous contacter"
+      secondaryCtaHref="/services"
+      secondaryCtaLabel="Notre maison"
+    />
+  );
 }
